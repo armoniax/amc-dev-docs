@@ -11,7 +11,12 @@ Contents
 --------
 
 .. toctree::
-
    usage
    api
    smart contract
+.. include:: chain/chain.rst
+   db/db
+   history/history
+   net/net
+   producer/producer
+   trace/trace
