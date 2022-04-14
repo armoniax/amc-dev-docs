@@ -1,4 +1,4 @@
-Armonia Meta Chain api
+Armonia Meta Chain API
 ======================
 
 `chain api <chain/chain.html>`__
