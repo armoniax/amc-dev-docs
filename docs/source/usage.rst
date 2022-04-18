@@ -1,34 +1,24 @@
-Usage
-=====
+installation
+============
 
-.. _installation:
+install Armoniax node tools from source
+---------------------------------------
 
-Installation
-------------
+if you first build, you should
 
-To use Lumache, first install it using pip:
+.. code:: shell
 
-.. code-block:: console
+   git clone https://github.com/armoniax/amax.meta.chain.git
+   git submodule update --init --recursive
+   ./scripts/amax_build.sh
 
-   (.venv) $ pip install lumache
+else, you can use make -j instead
 
-Creating recipes
-----------------
+install from docker image
+-------------------------
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
+use below command to download offical docker image from docker hub
 
-.. autofunction:: lumache.get_random_ingredients
+.. code:: shell
 
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
-
-.. autoexception:: lumache.InvalidKindError
-
-For example:
-
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
-
+   docker pull armoniax/amnod
