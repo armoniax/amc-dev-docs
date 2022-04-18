@@ -13,8 +13,10 @@ Contents
 .. toctree::
    usage
    api
+   FAQ
    smart contract
-.. include:: chain/chain.rst
+.. include:: 
+   chain/chain
    db/db
    history/history
    net/net
