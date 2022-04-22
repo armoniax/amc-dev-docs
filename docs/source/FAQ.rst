@@ -19,17 +19,17 @@ FAQ
    chain? <FAQ/FAQ.html#In Armonia's multi-chain ecosystem, what are the possible application scenarios that can be built through the mother chain?>`__   
    
 6. `In the Armonia multi-chain ecosystem, what are the possible 
-    application scenarios that can be constructed through child 
-    chains? <FAQ/FAQ.html#In the Armonia multi-chain ecosystem, what are the possible application scenarios that can be constructed through child chains?>`__
+   application scenarios that can be constructed through child 
+   chains? <FAQ/FAQ.html#In the Armonia multi-chain ecosystem, what are the possible application scenarios that can be constructed through child chains?>`__
     
 7. `What are the total design amount and management mechanism 
-    of the mother chain at present? <FAQ/FAQ.html#What are the total design amount and management mechanism of the mother chain at present?>`__
+   of the mother chain at present? <FAQ/FAQ.html#What are the total design amount and management mechanism of the mother chain at present?>`__
     
 8. `Why does Armonia Meta Chain adopt a new blockchain consensus 
-    mechanism? <FAQ/FAQ.html#Why does Armonia Meta Chain adopt a new blockchain consensus mechanism?>`__
+   mechanism? <FAQ/FAQ.html#Why does Armonia Meta Chain adopt a new blockchain consensus mechanism?>`__
     
 9. `What is the framework of APOS (Armonia DPOS) as the mother chain consensus 
-    mechanism? <FAQ/FAQ.html#What is the framework of APOS (Armonia DPOS) as the mother chain consensus mechanism?>`__
+   mechanism? <FAQ/FAQ.html#What is the framework of APOS (Armonia DPOS) as the mother chain consensus mechanism?>`__
     
 10. `Why can the double-chain structure of one main and one backup increase 
     revenue? <FAQ/FAQ.html#Why can the double-chain structure of one main and one backup increase revenue?>`__
