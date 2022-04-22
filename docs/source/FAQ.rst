@@ -15,12 +15,12 @@ FAQ
    chains? <FAQ/FAQ.html#Regarding the multi-chain hierarchical structure used by Armonia, how to realize interconnection between chains?>`__
    
 5. `In Armonia's multi-chain ecosystem, what are the possible 
-   application scenarios that can be built through the mother chain?
-   <FAQ/FAQ.html#In Armonia's multi-chain ecosystem, what are the possible application scenarios that can be built through the mother chain?>`__   
+   application scenarios that can be built through the mother 
+   chain? <FAQ/FAQ.html#In Armonia's multi-chain ecosystem, what are the possible application scenarios that can be built through the mother chain?>`__   
    
 6. `In the Armonia multi-chain ecosystem, what are the possible 
-    application scenarios that can be constructed through child chains? 
-    <FAQ/FAQ.html#In the Armonia multi-chain ecosystem, what are the possible application scenarios that can be constructed through child chains?>`__
+    application scenarios that can be constructed through child 
+    chains? <FAQ/FAQ.html#In the Armonia multi-chain ecosystem, what are the possible application scenarios that can be constructed through child chains?>`__
     
 7. `What are the total design amount and management mechanism 
     of the mother chain at present? <FAQ/FAQ.html#What are the total design amount and management mechanism of the mother chain at present?>`__
