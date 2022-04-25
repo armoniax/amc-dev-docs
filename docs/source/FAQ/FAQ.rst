@@ -154,4 +154,38 @@ Is the consensus mechanisms of the mother chain and child chains the same in Arm
 
 APOS is the consensus mechanism of the mother chain, while PoSA is the consensus mechanism of the EVA child chains.
 
+Why does Armoina adopt a 12-character-account naming requirement?
+=================================================================
 
+As the mother chain of Armonia multi-chain system, Armonia meta chain adopts 12 characters 
+(A-Z, 1-5) as the naming rule of user account. This design is to make the account name easy 
+to remember and spread, without inputting or passing the address of 26 to 42 characters used 
+by public chains such as BTC / ETH, and it allows users to customize the account name to meet 
+the personalized needs of social (including anonymous social). This convenient design will not 
+reduce the security of Armonia meta chain. The security of public chain interaction derives 
+from the length of the user's private key and the randomness of generation. In the process of 
+creating an account, APLink wallet adopts the BIP-44 protocol standard and the biometric digital 
+security of the wallet itself to protect the security of private key storage. Therefore, users 
+can use it without concern. In addition, more personalized naming requirements, such as choosing 
+a name with less than 12 characters, are likely to be met after the core team of Armonia meta 
+chain releases the decentralized account name auction function. Moreover, according to Armonia's 
+whitepaper, the length of the account name and the supported character types are expected to be expanded in public chain 2.0 to support more personalized requirements.
+
+
+Why does Armonia account activation need users to purchase RAM and stake CPU and network resources?
+===================================================================================================
+
+A: As the mother chain of Armonia multi-chain system, Armonia meta chain has the characteristics of high 
+performance, low cost and high security. Therefore, Armonia adopts the resource purchase and resource staking 
+model instead of Gas model to realize the ecosystem value of AMAX and prevent sybil attack and dust attack. 
+The resources include memory (RAM), computing (CPU) and network (NET). All the transactions made on Armonia 
+public chain are due to the function run by a smart contract. According to the implementation requirements of 
+the smart contract, different transactions require RAM and satisfaction of the usage requirements of CPU and NET. 
+The RAM cost cannot be recovered directly, but the CPU and NET costs recover their original share after the 
+transaction is successfully executed. This design provides DAPP, smart contract developers and managers with 
+the choice to help users pay RAM, and users can enjoy the transaction with zero Gas fee. Of course, smart 
+contract developers may also choose to require users to ensure that they have enough AMAX in their accounts 
+to pay for the RAM required for transactions. Similarly, the activation of user accounts involves the cost 
+of these three resources. Users with AMAX tokens must pay a certain amount of AMAX to activate a new account. 
+After receiving the AMAX transferred from others, a new account may also need to purchase and stake more AMAX 
+to obtain the resources required to make other transactions.
