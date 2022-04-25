@@ -18,7 +18,8 @@ It aims to provide L0 SDK underlying template to quickly build multiple applicat
 and realize seamless cross-chain of assets with the mother chain. Child chains should not only 
 support forms of various chains, but also adopt different consensus mechanisms. It will provide 
 nodes for ecosystems required by Web 3.0, obtain, register and anchor through the mother chain. 
-It incentivizes the providers of resources, providing all-round bottom-level support for building upper-level applications and the "Metaverse".
+It incentivizes the providers of resources, providing all-round bottom-level support for building 
+upper-level applications and the "Metaverse".
 
 What are the principles that Armonia adheres to?
 ================================================
@@ -169,7 +170,8 @@ security of the wallet itself to protect the security of private key storage. Th
 can use it without concern. In addition, more personalized naming requirements, such as choosing 
 a name with less than 12 characters, are likely to be met after the core team of Armonia meta 
 chain releases the decentralized account name auction function. Moreover, according to Armonia's 
-whitepaper, the length of the account name and the supported character types are expected to be expanded in public chain 2.0 to support more personalized requirements.
+whitepaper, the length of the account name and the supported character types are expected to be 
+expanded in public chain 2.0 to support more personalized requirements.
 
 
 Why does Armonia account activation need users to purchase RAM and stake CPU and network resources?
