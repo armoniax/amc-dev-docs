@@ -9,6 +9,22 @@ mother-child multi-chain technology platform.
 
 .. _armonia-is-a-multi-chain-platform-how-is-the-mother-chain-designed:
 
+How does Armonia establish construction goals?
+==============================================
+
+Armonia Meta Chain aims to provide a unified and unique account system and original token $AMAX, 
+as well as the underlying value momentum and trust anchor for the entire multi-chain ecosystem. 
+It aims to provide L0 SDK underlying template to quickly build multiple application child chains 
+and realize seamless cross-chain of assets with the mother chain. Child chains should not only 
+support forms of various chains, but also adopt different consensus mechanisms. It will provide 
+nodes for ecosystems required by Web 3.0, obtain, register and anchor through the mother chain. 
+It incentivizes the providers of resources, providing all-round bottom-level support for building upper-level applications and the "Metaverse".
+
+What are the principles that Armonia adheres to?
+================================================
+
+Armonia adhere to five principles: secure and reliable, extensible, high-performance, personalized and simply.
+
 Armonia is a multi-chain platform. How is the mother chain designed?
 ====================================================================
 
@@ -114,5 +130,28 @@ In the current Armonia ecosystem construction, what mining methods exist and wha
 Mining in the early stage of public chain construction accounts for 15%, mining in later stage
 of public chain construction accounts for 15%, main node mining accounts for 5%, backup node 
 mining accounts for 5%, and Web3.0 mining accounts for 10%, ecosystem construction mining accounts for 25%.
+
+Goal planning for Web3.0 construction and how to support it?
+============================================================
+
+It is intended that many centralized Internet basic services can be provided 
+in a decentralized manner, and the token $AMAX is used to support the settlement and incentives of these basic services.
+
+What are the basic DAOs in Armonia?
+===================================
+
+There are developer DAOs, node DAOs, AMAX token DAOs, and mining of all things.
+
+What is the current plan of Armonia's basic technical route?
+============================================================
+
+Gradually from the completion of the deployment of v1.0 to the realization of the 
+ecosystem opening of v2.0, and then to v3.0 to quickly building multiple chains within the ecosystem, 
+after the realization of v3.0, it will be fully driven and governed by the developer DAO.
+
+Is the consensus mechanisms of the mother chain and child chains the same in Armonia?
+=====================================================================================
+
+APOS is the consensus mechanism of the mother chain, while PoSA is the consensus mechanism of the EVA child chains.
 
 
