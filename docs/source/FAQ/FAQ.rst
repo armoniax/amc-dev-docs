@@ -29,3 +29,17 @@ Regarding the multi-chain hierarchical structure used by Armonia, how to realize
 
 Armonia provides L0-base as a general transaction routing module, which
 can quickly identify and process running nodes of a single chain.
+
+In Armonia's multi-chain ecosystem, what are the possible application
+scenarios that can be built through the mother chain?
+=====================================================
+
+Assets in various ecosystems can be issued, transferred, traded, and
+exchanged quickly. Incentive mining pools for ecosystem development
+will be built. Mother chain accounts support kyc/kyb and upper-layer 
+applications with regulatory requirements.
+
+In the Armonia multi-chain ecosystem, what are the possible application 
+scenarios that can be constructed through child chains?
+
+
