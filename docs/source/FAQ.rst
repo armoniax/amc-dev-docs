@@ -54,5 +54,38 @@ FAQ
     can it be used by child chains to operate? <FAQ/FAQ.html#As the native token $AMAX issued on the mother chain, 
     in addition of being the operational assets used by the mother chain, can it be used by child chains to operate?>`__
     
+17. `How is the total amount of the native token $AMAX 
+    distributed? <FAQ/FAQ.html#How is the total amount of the native token $AMAX distributed?>`__  
     
-     
+18. `In the ecosystem construction of Armonia, what is the mining of all 
+    things? <FAQ/FAQ.html#In the ecosystem construction of Armonia, what is the mining of all things?>`__
+    
+19. `In the current Armonia ecosystem construction, what mining methods exist and what are the 
+    distribution ratios? <FAQ/FAQ.html#In the current Armonia ecosystem construction, what mining methods exist and what are the distribution ratios?>`__
+
+20. `Goal planning for Web3.0 construction and how to support 
+    it? <FAQ/FAQ.html#Goal planning for Web3.0 construction and how to support it?>`__    
+       
+21. `With a decentralized world and the development of the entire ecosystem, a governance 
+    that conforms to the concept of decentralization is required. How does Armonia promote its construction 
+    and development? <FAQ/FAQ.html#With a decentralized world and the development of the 
+    entire ecosystem, a governance that conforms to the concept of decentralization is required. How does Armonia promote its construction and development?>`__
+    
+22. `What are the basic DAOs in 
+    Armonia? <FAQ/FAQ.html#What are the basic DAOs in Armonia?>`__
+ 
+23. `What is the current plan of Armonia's basic technical 
+    route? <FAQ/FAQ.html#What is the current plan of Armonia's basic technical route?>`__    
+
+24. `Is the consensus mechanisms of the mother chain and child 
+    chains the same in Armonia? <FAQ/FAQ.html#Is the consensus mechanisms of the mother chain and child chains the same in Armonia?>`__
+
+25. `Why does Armoina adopt a 12-character-account naming 
+    requirement? <FAQ/FAQ.html#Why does Armoina adopt a 12-character-account naming requirement?>`__
+
+26. `Why does Armonia account activation need users to purchase RAM and 
+    stake CPU and network resources? <FAQ/FAQ.html#Why does Armonia account activation need users to purchase RAM and stake CPU and network resources?>`__
+
+
+    
+    
