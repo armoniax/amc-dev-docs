@@ -177,7 +177,7 @@ expanded in public chain 2.0 to support more personalized requirements.
 Why does Armonia account activation need users to purchase RAM and stake CPU and network resources?
 ===================================================================================================
 
-A: As the mother chain of Armonia multi-chain system, Armonia meta chain has the characteristics of high 
+As the mother chain of Armonia multi-chain system, Armonia meta chain has the characteristics of high 
 performance, low cost and high security. Therefore, Armonia adopts the resource purchase and resource staking 
 model instead of Gas model to realize the ecosystem value of AMAX and prevent sybil attack and dust attack. 
 The resources include memory (RAM), computing (CPU) and network (NET). All the transactions made on Armonia 
