@@ -1,23 +1,25 @@
-installation
+Installation
 ============
 
-install Armoniax node tools from source
+Install Armoniax node tools from source
 ---------------------------------------
 
-if you first build, you should
+If you build for the first time, you should write
 
 .. code:: shell
 
-   git clone https://github.com/armoniax/amax.meta.chain.git
-   git submodule update --init --recursive
+   git clone https://github.com/armoniax/amax.meta.chain.git
+
+   git submodule update --init --recursive
+
    ./scripts/amax_build.sh
 
-else, you can use make -j instead
+Otherwise, you can use make -j instead.
 
-install from docker image
+Install from docker image
 -------------------------
 
-use below command to download offical docker image from docker hub
+Use the following commands to download offical docker image from docker hub.
 
 .. code:: shell
 
