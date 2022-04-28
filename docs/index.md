@@ -15,7 +15,7 @@ Armonia document is translated and maintained by Armonia community. This documen
 
 ### Smart Contract Development
 
-* [Smart contract API](Smart contract.md)
+* [Smart contract API](智能合约.md)
     * [Account API](API/Account-API.md) - querying account data.
     * [Chain API](API/Chain-API.md) - querying the internal state of the chain.
     * [Database API](API/Database-API.md) - storing and retrieving The data API of IO blockchain organizes data according to the following broad structure.
