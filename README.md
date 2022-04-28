@@ -12,6 +12,7 @@ mkdocs serve
 |---|---|---|
 |首页: index.md|100| Sophia|
 |相关页面: relatedpage.md |100|Sophia|
+|智能合约: smartcontract.md |50|Sophia|
 |模块: Modules.md |0|Sophia|
 |命名空间: namespaces/namespacelist.md|100|Sophia|
 |类: Classes/classlist.md |100|Sophia|
