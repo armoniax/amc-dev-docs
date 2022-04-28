@@ -1,29 +1,30 @@
-# 欢迎来到AMAX中文文档
+# Welcome to Armonia Docs
 
-### 声明   
+### Statement
 
-AMAX中文文档由AMAX中文社区翻译维护，本文档正在更新中，并且由于快速更新可能会发生变化。 有翻译不准确的情况请在电报群联系[AMAX中文社区](https://t.me/eosfanscn).
+Armonia document is translated and maintained by Armonia community. This document is updating and is probably going to change due to rapid update. In case of inaccurate translation, please contact Armonia community in [Telegram group](https://t.me/+nz6QOzhlrhVlMDc1https://t.me/Armonia_AMC).
 
 ### AMAX
-* [AMAX github Readme](https://github.com/EOSIO/eos#readme)
+* [AMAX github Readme](https://github.com/armoniax/amc-dev-docs)
 
-### AMAX中文
+### AMAX 
 
-* [AMAX 中文社区](https://eosfans.io)
-* [开发者指南](https://github.com/eosfansio/eos-tutorials)
-* [其他资源](https://github.com/eosfansio)
+* [AMAX community](https://amaxscan.io)
+* [Developer Guide](https://github.com/armoniax/amc-dev-docs)
+* [Other resources](https://github.com/armoniax)
 
-### 智能合约开发
-* [RPC接口](API/EOSIO-RPC.md)
-* [智能合约API参考](智能合约.md)
-    * [Account API](API/Account-API.md) - 查询账户数据的api.
-    * [Chain API](API/Chain-API.md) - 查询链内部状态的api.
-    * [Database API](API/Database-API.md) - 存储和检索EOS.IO区块链的数据API根据以下广泛结构来组织数据.
-    * [Math API](API/Math-API.md) - 定义常用的数学函数.
-    * [Action API](API/Account-API.md) - 定义用于查询操作属性的API.
-    * [Memory API]() - 定义常用的记忆功能.
-    * [Console API](API/Console-API.md) - 使应用程序能够记录/打印文本消息.
-    * [System API](API/System-API.md) - 定义用于与系统级内部函数进行交互的API.
-    * [Token API](API/Token-API.md) - 定义用于与标准兼容的令牌消息和数据库表进行交互的ABI.
-    * [Transaction API](API/Transaction-API.md) - 定义用于发送事务和内联消息的API.
-    * [Builtin Types](API/Types.md) - 指定typedefs和别名.
+### Smart Contract Development
+
+* [Smart contract API](Smart contract.md)
+    * [Account API](API/Account-API.md) - querying account data.
+    * [Chain API](API/Chain-API.md) - querying the internal state of the chain.
+    * [Database API](API/Database-API.md) - storing and retrieving The data API of IO blockchain organizes data according to the following broad structure.
+    * [Math API](API/Math-API.md) - defining common mathematical functions.
+    * [Action API](API/Account-API.md) - defining the API used to query action attributes.
+    * [Memory API]() - defining common memory functions.
+    * [Console API](API/Console-API.md) - enabling applications to log / print messages.
+    * [System API](API/System-API.md) - defining the API used to interact with system level internal functions.
+    * [Token API](API/Token-API.md) - defining the ABI used to interact with standard compliant token messages and database tables.
+    * [Transaction API](API/Transaction-API.md) - defining the API used to send transactions and messages.
+    * [Builtin Types](API/Types.md) - specifying typedefs and aliases.
+
