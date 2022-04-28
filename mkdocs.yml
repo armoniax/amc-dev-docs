@@ -2,5 +2,7 @@ site_name: AMAX官方文档中文版
 
 extra:
     version: 3.0
+python:
+    version: 3.7.2
 
 theme: readthedocs
