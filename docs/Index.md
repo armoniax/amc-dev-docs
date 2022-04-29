@@ -7,7 +7,7 @@ Armonia document is translated and maintained by Armonia community. This documen
 ### AMAX
 * [AMAX github Readme](https://github.com/armoniax/amc-dev-docs)
 
-### AMAX 
+### AMAX(ZH)
 
 * [AMAX community](https://amaxscan.io)
 * [Developer Guide](https://github.com/armoniax/amc-dev-docs)
@@ -15,13 +15,13 @@ Armonia document is translated and maintained by Armonia community. This documen
 
 ### Smart Contract Development
 
-* [Smart contract API](智能合约.md)
+* [Smart contract API](Smart Contract.md)
     * [Account API](API/Account-API.md) - querying account data.
     * [Chain API](API/Chain-API.md) - querying the internal state of the chain.
     * [Database API](API/Database-API.md) - storing and retrieving The data API of IO blockchain organizes data according to the following broad structure.
     * [Math API](API/Math-API.md) - defining common mathematical functions.
     * [Action API](API/Account-API.md) - defining the API used to query action attributes.
-    * [Memory API]() - defining common memory functions.
+    * [Memory API](API/Memory-API.md) - defining common memory functions.
     * [Console API](API/Console-API.md) - enabling applications to log / print messages.
     * [System API](API/System-API.md) - defining the API used to interact with system level internal functions.
     * [Token API](API/Token-API.md) - defining the ABI used to interact with standard compliant token messages and database tables.
