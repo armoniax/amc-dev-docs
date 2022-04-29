@@ -42,7 +42,7 @@ Modules
 
 # Description
 
-##　Background
+## Background
 
 Armonia contracts (also known as applications) are deployed to the blockchain as precompiled Web Assemblies (also known as WASM). WASM is compiled from C / C++ using LLVM and clang. It means that you need the knowledge of C / C++ to develop your blockchain application. Although it can be developed in C, we strongly recommend that all developers use Armonia C++ API, which provides stronger security and is easier to read.
 
