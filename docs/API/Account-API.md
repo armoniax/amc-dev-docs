@@ -13,13 +13,13 @@ retrieve the balance of the account provided
 bool 	account_balance_get(void *balance, uint32_t len)   
 
 > * Parameter:   
-    * balance - a pointer to a series of memory that stores   
-    * len - > * * length of memory for storing balance data       
+     * balance - a pointer to a series of memory that stores balance data  
+     * len - length of memory for storing balance data      
 > * Return:     
-    * If the account is retrieved as returned: `true`   
+    If the account is retrieved as returned: `true`   
 > * Premise:   
-    * Data is a valid pointer to a memory range at least datalen bytes long      
-    * Data is the pointer to the balance object\*((uint64_t\*)data)to store the primary key   
+    Data is a valid pointer to a memory range at least datalen bytes long      
+    Data is the pointer to the balance object\*((uint64_t\*)data)to store the primary key   
     
 Example:
 ```C
@@ -39,41 +39,41 @@ Binary structure of account balance
 * bool eosio::accout::get(account_balance &acnt)  
 Return an account balance structure
 
-## 函数说明
+## Function description
 * <h5>bool eosio::account::get(account_balance & acnt) </h5>  
- 	返回一个账户余额结构
+ 	return an account balance structure
 
->* 参数:
-    * acnt - 账户
->* 返回  
-如果找到帐户的余额，则为`true`
+>* Parameter:
+    * acnt - account
+>* Return  
+If the account balance is found，it shows`true`
 
 <h2><span id="h2_tag">eosio::account::account_balance 类型说明</span></h2>
-账户余额的二进制结构
+Binary structure of account balance
 
 
 \#include<account.hpp\>
 
 
-### 公共属性
+### Common property
 
 * <h5>account_name 	[account](#account)   </h5>
- 	所查余额的账户名称
+ 	account name of the balance checked
  
 * <h5>asset [eos_balance](#eos_balance)  </h5>
- 	账户的余额
+ 	account balance
  
 * <h5>asset 	[staked_balance](#staked_balance)  </h5> 
- 	账户的抵押余额
+ 	staked balance of account
  
 * <h5>asset 	[unstaking_balance](#unstaking_balance)   </h5>
- 	账户正在取消抵押的余额
+ 	unstaking balance of account
  
 * <h5>time 	[last_unstaking_time](#last_unstaking_time) </h5>  
- 	这个账户最后取消抵押余额的时间</h5>
+ 	last unstaking time of account</h5>
 
-### 详细的描述
-例子:
+### Description
+Example:
 ```c++
 account_balance test1_balance;
 test1_balance.account = N(test1);
@@ -83,32 +83,32 @@ if (account_api::get(test1_balance))
 }
 ```
 
-### 数据成员说明文档
+### Data description docs
 
 <h5 id="account">account</h5>
 > account_name eosio::account::account_balance::account   
 
-        所查余额的账户名称
+     account name of the balance checked
 
 <h5 id="eos_balance">eos_balance</h5>
 > asset eosio::account::account_balance::eos_balance   
         
-     账户的余额
+     account balance
 
 <h5 id="last_unstaking_time">last_unstaking_time</h5>   
 >time eosio::account::account_balance::last_unstaking_time   
 
-    账户正在取消抵押的余额
+     unstaking balance of account
 
 <h5 id="staked_balance">staked_balance</h5>
 > asset eosio::account::account_balance::staked_balance   
 
-    账户的抵押余额
+    staked balance of account
 
 <h5 id="unstaking_balance">unstaking_balance</h5>
 > asset eosio::account::account_balance::unstaking_balance   
 
-    这个账户最后取消抵押余额的时间
+    last unstaking time of account
 
-### 源文档
+### Source docs
 <h5> contracts/eosiolib/account.hpp</h5>
