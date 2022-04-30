@@ -19,7 +19,7 @@ bool 	account_balance_get(void *balance, uint32_t len)
     If the account is retrieved as returned: `true`   
 > * Premise:   
     Data is a valid pointer to a memory range at least datalen bytes long      
-    Data is the pointer to the balance object\*((uint64_t\*)data)to store the primary key   
+    Data is the pointer to the balance object\*((uint64_t\*)data) to store the primary key   
     
 Example:
 ```C
@@ -29,7 +29,7 @@ balance(b, sizeof(balance));
 ```
 
 # Account CPP API    
-C++ API for querying account data. Example: account balance
+C++ API for querying account data. Example: account balance.
 
 ## Class
 > struct  [eosio::account::account_balance](#h2_tag)　　  
@@ -48,9 +48,8 @@ Return an account balance structure
 >* Return  
 If the account balance is found，it shows`true`
 
-<h2><span id="h2_tag">eosio::account::account_balance 类型说明</span></h2>
+<h2><span id="h2_tag">eosio::account::account_balance type description</span></h2>
 Binary structure of account balance
-
 
 \#include<account.hpp\>
 
@@ -88,7 +87,7 @@ if (account_api::get(test1_balance))
 <h5 id="account">account</h5>
 > account_name eosio::account::account_balance::account   
 
-     account name of the balance checked
+     	account name of the balance checked
 
 <h5 id="eos_balance">eos_balance</h5>
 > asset eosio::account::account_balance::eos_balance   
