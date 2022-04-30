@@ -1,28 +1,27 @@
 # Account API
 # Account C API   
-查询账户数据的c语言api.
+C API for querying account data.
 
-## 函数
+## Function
 
 > bool 	account_balance_get(void *balance, uint32_t len)   
-检索所提供帐户的余额
+retrieve the balance of the account provided
 
-## 函数文档
+## Function docs
 
 * <h5>account_balance_get()   </h5>
 bool 	account_balance_get(void *balance, uint32_t len)   
 
-> * 参数:   
-    * balance - 指向存储余额数据的一系列内存的指针   
-    * len - 存储余额数据的内存范围的长度
-       
+> * Parameter:   
+    * balance - a pointer to a series of memory that stores   
+    * len - > * * length of memory for storing balance data       
 > * Return:     
-     如果账户信息被检索到返回: `true`   
-> * 前提:   
-    数据是指向至少datalen字节长的内存范围的有效指针   
-    数据是指向balance对象的指针\*((uint64_t\*)data)存储主键   
+    * If the account is retrieved as returned: `true`   
+> * Premise:   
+    * Data is a valid pointer to a memory range at least datalen bytes long      
+    * Data is the pointer to the balance object\*((uint64_t\*)data)to store the primary key   
     
-例子:
+Example:
 ```C
 balance b;
 b.account = N(myaccount);
@@ -30,15 +29,15 @@ balance(b, sizeof(balance));
 ```
 
 # Account CPP API    
-查询账户数据的c++语言api.例子: account balance
+C++ API for querying account data. Example: account balance
 
-## 类
+## Class
 > struct  [eosio::account::account_balance](#h2_tag)　　  
-账户余额的二进制结构
+Binary structure of account balance
 
-## 函数
+## Function
 * bool eosio::accout::get(account_balance &acnt)  
-返回一个账户余额结构
+Return an account balance structure
 
 ## 函数说明
 * <h5>bool eosio::account::get(account_balance & acnt) </h5>  
