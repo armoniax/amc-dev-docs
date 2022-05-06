@@ -2,10 +2,10 @@ RPC
 ----
 Describe how to use HTTP RPC.
 
-Content list
+Content
 ---
-- [配置](#配置)
-- [链接口](#链接口)
+- [Disposition](#Disposition)
+- [Interface](#Interface)
     - [get_info](#get_info)
     - [get_block](#get_block)
     - [get_account](#get_account)
@@ -32,25 +32,16 @@ Content list
 
 # Disposition
 
-eosd使用REST RPC接口，插件可以在API服务器上注册自己的端点。 本页将解释如何使用一些API来获取有关区块链和发送事务的信息。
+Amax uses REST RPC interface, and plug-ins can register their own endpoints on the API server. This page will explain how to use APIs to get information about blockchain and transaction.
 
-在查询eosd之前，您必须先启用必要的API插件。根据您希望启用的API，将以下行添加到您的eosd的config.ini中：
+Before querying Amax, you must enable the required API plug-in. Add the following line to your Amax's config.ini, depending on the API you want to use:
 
 ```C++
 plugin = eosio::chain_api_plugin // 生效链API
 plugin = eosio::wallet_api_plugin // 生效钱包API
 ```
-另外，对于电子钱包API，您还可以通过单独运行eos-walletd将电子钱包功能与eosd分开。
+In addition, for wallet API, you can separate the wallet function from Amax by running wallet separately.
 
-对于以下指南，我们假定我们已经在127.0.0.1:8888（启用了链接API插件，电子钱包API插件已禁用）以及在127.0.0.1:8889上运行的eos-walletd运行。
-Eosd uses the rest RPC interface, and plug-ins can register their own endpoints on the API server. This page will explain how to use some APIs to get information about blockchains and send transactions.
-Before querying eosd, you must enable the necessary API plug-ins. Add the following line to your eosd's config.config, depending on the API you want to enable Ini:
-```C++
-plugin = eosio::chain_ api_ Plugin / / effective chain API
-plugin = eosio::wallet_ api_ Plugin / / effective wallet API
-```
-In addition, for the wallet API, you can also separate the wallet function from eosd by running EOS wallet separately.
-For the following guidelines, we assume that we have run on 127.0.0.1:8888 (link API plug-in enabled, wallet API plug-in disabled) and EOS walletd running on 127.0.0.1:8889.
 
 # Interface
 ## get_info
