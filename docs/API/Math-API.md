@@ -1,47 +1,47 @@
 # Math API
 
-定义常用的数学函数.
+Define common mathematical functions.
 
-# 模块
+# Module
 
 ## Math C API   
-定义使用更高抽象的基本数学运算.
+Define basic mathematical operations that use higher abstraction.
 
-### 函数
+### Function
 
 - <h5> void 	[multeq_i128](#multeq_i128) (uint128_t *self, const uint128_t *other)</h5>
- 	- 乘以两个128位无符号位整数。 如果指针无效，则抛出异常。
+ 	- Multiply by two 128 bit unsigned bit integers. If the pointer is invalid, an exception is thrown.
 
 - <h5> void 	[diveq_i128](#diveq_i128) (uint128_t *self, const uint128_t *other)</h5>
- 	- 将两个128位无符号位整数相除，并在无效指针时引发异常.
+ 	- Divides two 128 bit unsigned bit integers and throws an exception when the pointer is invalid.
 
 - <h5> uint64_t 	[double_add](#double_add) (uint64_t a, uint64_t b)</h5>
- 	- double类型之间相加。
+ 	- Add between double types.
 
 - <h5> uint64_t 	[double_mult](#double_mult) (uint64_t a, uint64_t b)</h5>
- 	-  double类型之间相乘
+ 	- Multiply between double types.
 
 - <h5>uint64_t 	[double_div](#double_div) (uint64_t a, uint64_t b)</h5>
- 	-  double类型之间相除
+ 	- Divide between double types.
 
 - <h5>uint32_t 	[double_lt](#double_lt) (uint64_t a, uint64_t b)</h5>
- 	- double类型小于比较。
+ 	- Compare which double type is smaller.
 
 - <h5>uint32_t 	[double_eq](#double_eq) (uint64_t a, uint64_t b)</h5>
- 	- double类型相等比较。
+ 	- Double type equality comparison.
 
 - <h5>uint32_t 	[double_gt](#double_gt) (uint64_t a, uint64_t b)</h5>
- 	- double类型大于比较。
+ 	- Compare which double type is larger.
 
 - <h5>uint64_t [double_to_i64](#double_to_i64) (uint64_t a)</h5>
- 	- 将double转换为64位无符号整数。
+ 	- Convert a double to a 64 bit unsigned integer。
 
 - <h5>uint64_t 	[i64_to_double](#i64_to_double) (uint64_t a)</h5>
- 	- 将64位无符号整数转换为double（解释为64位无符号整数）。
+ 	- Converts a 64 bit unsigned integer to double (interpreted as a 64 bit unsigned integer).
 
-### 详细描述
+### Description
 
-### 函数说明
+### Function description
 
 - <h5> <span id="diveq_i128">diveq_i128()</span></h5>
 
@@ -52,7 +52,7 @@
         - self 指向分子的指针。它将被替换为结果
         - other 指向分母的指针　　　
 
-例子:
+Example:
 
 ```c++
 uint128_t self(100);
@@ -73,7 +73,7 @@ printi128(self); // Output: 1
         - reinterpret_cast将相加得到的64位无符号整数的结果
         　　　　
 
-例子:
+Example:
 
 ```c++
 uint64_t a = double_div( i64_to_double(5), i64_to_double(10) );
@@ -91,7 +91,7 @@ printd(res); // Output: 3
     - 返回
         - 相除的结果reinterpret_cast转换为64位无符号整数　
         　　
-例子:
+Example:
 
 ```c++
 uint64_t a = double_div( i64_to_double(10), i64_to_double(100) );
@@ -107,7 +107,7 @@ printd(a); // Output: 0.1
     - 返回
         - 如果第一个输入等于第二个输入，则为1，否则为0　　
         　
-例子:
+Example:
 
 ```c++
 int64_t a = double_div( i64_to_double(10), i64_to_double(10) );
@@ -125,7 +125,7 @@ printi(res); // Output: 0
     - 返回
         - 如果第一个输入大于于第二个输入，则为1，否则为0　　
         　
-例子:
+Example:
 
 ```c++
 uint64_t a = double_div( i64_to_double(10), i64_to_double(10) );
@@ -144,7 +144,7 @@ printi(res); // Output: 0
     - 返回
         - 如果第一个输入小于于第二个输入，则为1，否则为0
         　　　　
-例子:
+Example:
 
 ```c++
 uint64_t a = double_div( i64_to_double(10), i64_to_double(10) );
@@ -163,7 +163,7 @@ printi(res); // Output: 1
     - 返回
         - 相乘的结果reinterpret_cast转换为64位无符号整数
         　　　
-例子:
+Example:
 
 ```c++
 uint64_t a = double_div( i64_to_double(10), i64_to_double(10) );
@@ -180,7 +180,7 @@ printd(res); // Output: 2.5
     - 返回
         -　64位无符号整数转换结果　
         　　
-例子:
+Example:
 
 ```c++
 uint64_t a = double_div( i64_to_double(5), i64_to_double(2) );
@@ -197,7 +197,7 @@ printi(res); // Output: 2
     - 返回
         -　double类型转换结果　　　
 
-例子:
+Example:
 
 ```c++
 uint64_t res = i64_to_double( 3 );
@@ -213,7 +213,7 @@ printd(res); // Output: 3
   - 返回
     -　double类型转换结果　　　
 
-例子:
+Example:
 
 ```c++
 uint128_t self(100);
@@ -268,7 +268,7 @@ T 	[eosio::max](#max) (const T& a, const T& b)
   - Parameters
        - self	分子. 它的值将被结果替代。
        - other	分母。
-示例:
+Example:
 ```
 uint128_t self(100);
 uint128_t other(100);
@@ -286,7 +286,7 @@ std::cout << self; // Output: 1
       - b　比较值
   - 返回
     获取a和b中更大的一个. 如果相等返回a
-示例:
+Example:
 ```
 uint128_t a(1);
 uint128_t b(2);
@@ -303,7 +303,7 @@ std::cout << max(a, b); // Output: 2
      - b 比较值
    - 返回
         获取a和b中更小的一个. 如果相等返回a
-示例:
+Example:
 ```
 uint128_t a(1);
 uint128_t b(2);
@@ -317,7 +317,7 @@ std::cout << min(a, b); // Output: 1
    - 参数
       - self	相乘的值. 它的值将被结果替代。
       - other	相乘的值.
-示例:
+Example:
 ```
 uint128_t self(100);
 uint128_t other(100);
