@@ -1,14 +1,14 @@
 # Database API
 
-存储和检索EOS.IO区块链的数据API根据以下广泛结构来组织数据.
+Store and retrieve the data of Armonia blockchain. It organizes data according to the following broad structure.
 
-# 模块
+# Module
 
 
 ## Database C API    
  数据库的C语言接口.
 
-### 详细描述
+### Description
 
 
 - code - 具有写入权限的帐户名称.
