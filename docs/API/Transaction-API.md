@@ -12,7 +12,7 @@ Safe Transaction C++ encapsulation for C API
 
 ### Description
 
-AMAX.IO transaction has the following abstract structure:：
+AMAX transaction has the following abstract structure:：
 
 ```C++
 struct transaction {
