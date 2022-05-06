@@ -1,8 +1,8 @@
-RPC接口
+RPC
 ----
-描述怎样去调用eosd的HTTP RPC.
+Describe how to use HTTP RPC.
 
-内容列表
+Content list
 ---
 - [配置](#配置)
 - [链接口](#链接口)
@@ -17,7 +17,7 @@ RPC接口
     - [push_transactions](#push_transactions)
     - [get_required_keys](#get_required_keys)
  
-- [钱包接口](#钱包接口)
+- [wallet RPC](#wallet RPC)
     - [wallet_create](#wallet_create)
     - [wallet_open](#wallet_open)
     - [wallet_lock](#wallet_lock)
@@ -30,7 +30,7 @@ RPC接口
     - [wallet_sign_trx](#wallet_sign_trx)
 
 
-# 配置
+# Disposition
 
 eosd使用REST RPC接口，插件可以在API服务器上注册自己的端点。 本页将解释如何使用一些API来获取有关区块链和发送事务的信息。
 
@@ -43,19 +43,27 @@ plugin = eosio::wallet_api_plugin // 生效钱包API
 另外，对于电子钱包API，您还可以通过单独运行eos-walletd将电子钱包功能与eosd分开。
 
 对于以下指南，我们假定我们已经在127.0.0.1:8888（启用了链接API插件，电子钱包API插件已禁用）以及在127.0.0.1:8889上运行的eos-walletd运行。
+Eosd uses the rest RPC interface, and plug-ins can register their own endpoints on the API server. This page will explain how to use some APIs to get information about blockchains and send transactions.
+Before querying eosd, you must enable the necessary API plug-ins. Add the following line to your eosd's config.config, depending on the API you want to enable Ini:
+```C++
+plugin = eosio::chain_ api_ Plugin / / effective chain API
+plugin = eosio::wallet_ api_ Plugin / / effective wallet API
+```
+In addition, for the wallet API, you can also separate the wallet function from eosd by running EOS wallet separately.
+For the following guidelines, we assume that we have run on 127.0.0.1:8888 (link API plug-in enabled, wallet API plug-in disabled) and EOS walletd running on 127.0.0.1:8889.
 
-# 链接口
+# Interface
 ## get_info
 
-获取与节点相关的最新信息
+Get the latest information related to the node.
 
-### get_info 用法示例
+### get_info usage example
 
 ```bash
 curl http://127.0.0.1:8888/v1/chain/get_info
 ```
 
-### get_info结果示例
+### get_info result example
 
 ```json
 {
@@ -72,16 +80,16 @@ curl http://127.0.0.1:8888/v1/chain/get_info
 
 ## get_block
 
-获取一个块的信息
+Get block information.
 
-### get_block 用法示例
+### get_block usage example
 
 ```bash
 $ curl  http://127.0.0.1:8888/v1/chain/get_block -X POST -d '{"block_num_or_id":5}'
 $ curl  http://127.0.0.1:8888/v1/chain/get_block -X POST -d '{"block_num_or_id":0000000445a9f27898383fd7de32835d5d6a978cc14ce40d9f327b5329de796b}'
 ```
 
-### get_block 结果示例
+### get_block result example
 
 ```json
 {
@@ -100,15 +108,15 @@ $ curl  http://127.0.0.1:8888/v1/chain/get_block -X POST -d '{"block_num_or_id":
 
 ## get_account
 
-获取账户的信息
+Get account information.
 
-### get_account 用法示例
+### get_account usage example
 
 ```bash
 $ curl  http://127.0.0.1:8888/v1/chain/get_account -X POST -d '{"account_name":"inita"}'
 ```
 
-### get_account 结果示例
+### get_account result example
 
 ```json
 {
@@ -152,15 +160,15 @@ $ curl  http://127.0.0.1:8888/v1/chain/get_account -X POST -d '{"account_name":"
 
 ## get_code
 
-获取智能合约代码
+Get smart contract code
 
-### get_code 用法示例
+### get_code usage example
 
 ```bash
 $ curl  http://127.0.0.1:8888/v1/chain/get_code -X POST -d '{"account_name":"currency"}'
 ```
 
-### get_code 结果示例
+### get_code result example
 
 ```json
 {
@@ -209,16 +217,16 @@ $ curl  http://127.0.0.1:8888/v1/chain/get_code -X POST -d '{"account_name":"cur
 
 ## get_table_rows
 
-获取智能合约数据
+Get smart contract data.
 
-### get_table_rows 用法示例
+### get_table_rows usage example
 
 ```bash
 $ curl  http://127.0.0.1:8888/v1/chain/get_table_rows -X POST -d '{"scope":"inita", "code":"currency", "table":"account", "json": true}'
 $ curl  http://127.0.0.1:8888/v1/chain/get_table_rows -X POST -d '{"scope":"inita", "code":"currency", "table":"account", "json": true, "lower_bound":0, "upper_bound":-1, "limit":10}'
 ```
 
-### get_table_rows 结果示例
+### get_table_rows result example
 
 ```json
 {
@@ -234,15 +242,15 @@ $ curl  http://127.0.0.1:8888/v1/chain/get_table_rows -X POST -d '{"scope":"init
 
 ## abi_json_to_bin
 
-将json序列化为二进制十六进制。得到的二进制十六进制通常用于push_transaction中的数据字段。
+Serialize json to binary hexadecimal. The resulting binary hexadecimal is usually used for data fields of push_transaction.
 
-### abi_json_to_bin 用法示例
+### abi_json_to_bin usage example
 
 ```bash
 $ curl  http://127.0.0.1:8888/v1/chain/abi_json_to_bin -X POST -d '{"code":"currency", "action":"transfer", "args":{"from":"initb", "to":"initc", "quantity":1000}}'
 ```
 
-### abi_json_to_bin 结果示例
+### abi_json_to_bin result example
 
 ```json
 {
@@ -254,15 +262,15 @@ $ curl  http://127.0.0.1:8888/v1/chain/abi_json_to_bin -X POST -d '{"code":"curr
 
 ## abi_bin_to_json
 
-将二进制十六进制序列化为json。
+Serialize binary hex to json.
 
-### abi_bin_to_json 用法示例
+### abi_bin_to_json usage example
 
 ```bash
 $ curl  http://127.0.0.1:8888/v1/chain/abi_bin_to_json -X POST -d '{"code":"currency", "action":"transfer", "binargs":"000000008093dd74000000000094dd74e803000000000000"}'
 ```
 
-### abi_bin_to_json 结果示例
+### abi_bin_to_json result example
 
 ```json
 {
@@ -278,11 +286,11 @@ $ curl  http://127.0.0.1:8888/v1/chain/abi_bin_to_json -X POST -d '{"code":"curr
 
 ## push_transaction
 
-此方法预期采用JSON格式的事务，并将尝试将其应用于区块链。
+This method expects transactions in JSON format and will try to apply it to blockchain.
 
-### 成功的返回
+### Successful return
 
-成功时它将返回HTTP 200和事务ID。
+When successful, it will return HTTP 200 and transaction ID.
 
 ```json
 {
@@ -290,11 +298,11 @@ $ curl  http://127.0.0.1:8888/v1/chain/abi_bin_to_json -X POST -d '{"code":"curr
 }
 ```
 
-仅仅因为交易是在本地进行的，并不意味着交易已经被合并到一个区块中。
+Just because the transaction is conducted locally does not mean that the transaction has been merged into one block.
 
-### 错误的返回
+### Error return
 
-如果发生错误，它将返回HTTP 400（无效参数）或500（内部服务器错误）
+If an error occurs, it will return HTTP 400 (invalid parameter) or 500 (internal server error)
 
 ```
 HTTP/1.1 500 Internal Server Error
@@ -304,9 +312,9 @@ Content-Length: 1466
 
 ## push_transactions
 
-该方法一次推送多个事务。
+Push multiple transactions at a time.
 
-### push_transactions 用法示例
+### push_transactions usage example
 
 ```bash
 curl  http://localhost:8888/v1/chain/push_transaction -X POST -d '[{"ref_block_num":"101","ref_block_prefix":"4159312339","expiration":"2017-09-25T06:28:49","scope":["initb","initc"],"actions":[{"code":"currency","type":"transfer","recipients":["initb","initc"],"authorization":[{"account":"initb","permission":"active"}],"data":"000000000041934b000000008041934be803000000000000"}],"signatures":[],"authorizations":[]}, {"ref_block_num":"101","ref_block_prefix":"4159312339","expiration":"2017-09-25T06:28:49","scope":["inita","initc"],"actions":[{"code":"currency","type":"transfer","recipients":["inita","initc"],"authorization":[{"account":"inita","permission":"active"}],"data":"000000008040934b000000008041934be803000000000000"}],"signatures":[],"authorizations":[]}]'
@@ -314,15 +322,15 @@ curl  http://localhost:8888/v1/chain/push_transaction -X POST -d '[{"ref_block_n
 
 ## get_required_keys
 
-获取必需的密钥，从密钥列表中签署交易。
+Get required private keys and sign the transaction from the key list.
 
-### get_required_keys 用法示例
+### get_required_keys usage example
 
 ```bash
 curl  http://localhost:8888/v1/chain/get_required_keys -X POST -d '{"transaction": {"ref_block_num":"100","ref_block_prefix":"137469861","expiration":"2017-09-25T06:28:49","scope":["initb","initc"],"actions":[{"code":"currency","type":"transfer","recipients":["initb","initc"],"authorization":[{"account":"initb","permission":"active"}],"data":"000000000041934b000000008041934be803000000000000"}],"signatures":[],"authorizations":[]}, "available_keys":["EOS4toFS3YXEQCkuuw1aqDLrtHim86Gz9u3hBdcBw5KNPZcursVHq","EOS7d9A3uLe6As66jzN8j44TXJUqJSK3bFjjEEqR4oTvNAB3iM9SA","EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV"]}'```
 ```
 
-### get_required_keys 结果示例
+### get_required_keys result example
 
 ```json
 {
@@ -334,15 +342,15 @@ curl  http://localhost:8888/v1/chain/get_required_keys -X POST -d '{"transaction
 
 ## get_required_keys
 
-获取必需的密钥，从密钥列表中签署交易。
+Get required keys and sign the transaction from the key list.
 
-### get_required_keys 用法示例
+### get_required_keys usage example
 
 ```bash
 curl  http://localhost:8888/v1/chain/get_required_keys -X POST -d '{"transaction": {"ref_block_num":"100","ref_block_prefix":"137469861","expiration":"2017-09-25T06:28:49","scope":["initb","initc"],"actions":[{"code":"currency","type":"transfer","recipients":["initb","initc"],"authorization":[{"account":"initb","permission":"active"}],"data":"000000000041934b000000008041934be803000000000000"}],"signatures":[],"authorizations":[]}, "available_keys":["EOS4toFS3YXEQCkuuw1aqDLrtHim86Gz9u3hBdcBw5KNPZcursVHq","EOS7d9A3uLe6As66jzN8j44TXJUqJSK3bFjjEEqR4oTvNAB3iM9SA","EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV"]}'```
 ```
 
-### get_required_keys 结果示例
+### get_required_keys result example
 
 ```json
 {
@@ -352,22 +360,22 @@ curl  http://localhost:8888/v1/chain/get_required_keys -X POST -d '{"transaction
 }
 ```
 
-# 钱包接口
+# Wallet RPC
 
 
 ## wallet_create
 
-用给定的名称创建一个新的钱包.
+Create a wallet with given name.
 
-### wallet_create 用法示例
+### wallet_create usage example
 
 ```bash
 $ curl http://localhost:8889/v1/wallet/create -X POST -d '"default"'
 ```
 
-### wallet_create 结果示例
+### wallet_create result example
 
-该命令将返回将来可用于解锁钱包的密码.
+This command will return the password that can be used to unlock the wallet in the future.
 
 ```
 PW5KFWYKqvt63d4iNvedfDEPVZL227D3RQ1zpVFzuUwhMAJmRAYyX
@@ -375,15 +383,15 @@ PW5KFWYKqvt63d4iNvedfDEPVZL227D3RQ1zpVFzuUwhMAJmRAYyX
 
 ## wallet_open
 
-打开给定名称的现有钱包.
+Open an existing wallet with the given name.
 
-### wallet_open 用法示例
+### wallet_open usage example
 
 ```bash
 $ curl http://localhost:8889/v1/wallet/open -X POST -d '"default"'
 ```
 
-### wallet_open 结果示例
+### wallet_open result example
 
 ```json
 {}
@@ -391,15 +399,15 @@ $ curl http://localhost:8889/v1/wallet/open -X POST -d '"default"'
 
 ## wallet_lock_all
 
-锁定所有钱包.
+Lock all wallets.
 
-### wallet_lock_all 用法示例
+### wallet_lock_all usage example
 
 ```bash
 $ curl http://localhost:8889/v1/wallet/lock_all 
 ```
 
-### wallet_lock_all 结果示例
+### wallet_lock_all result example
 
 ```json
 {}
@@ -407,15 +415,15 @@ $ curl http://localhost:8889/v1/wallet/lock_all
 
 ## wallet_unlock
 
-用给定的名称和密码解锁钱包.
+Unlock the wallet with the given name and password.
 
-### wallet_unlock 用法示例
+### wallet_unlock usage example
 
 ```bash
 $ curl http://localhost:8889/v1/wallet/unlock -X POST -d '["default", "PW5KFWYKqvt63d4iNvedfDEPVZL227D3RQ1zpVFzuUwhMAJmRAYyX"]'
 ```
 
-### wallet_unlock 结果示例
+### wallet_unlock result example
 
 ```json
 {}
@@ -423,15 +431,15 @@ $ curl http://localhost:8889/v1/wallet/unlock -X POST -d '["default", "PW5KFWYKq
 
 ## wallet_list
 
-列出所有钱包.
+List all wallets.
 
-### wallet_list 用法示例
+### wallet_list usage example
 
 ```bash
 $ curl http://localhost:8889/v1/wallet/list_wallets
 ```
 
-### wallet_list 结果示例
+### wallet_list result example
 
 ```json
 ["default *"]
@@ -440,15 +448,15 @@ $ curl http://localhost:8889/v1/wallet/list_wallets
 
 ## wallet_list_keys
 
-列出所有钱包中的所有密钥对.
+List all private keys in all wallets.
 
-### wallet_list_keys 用法示例
+### wallet_list_keys usage example
 
 ```bash
 $ curl http://localhost:8889/v1/wallet/list_keys
 ```
 
-### wallet_list_keys 结果示例
+### wallet_list_keys result example
 
 ```json
 [["EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV","5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3"]]
@@ -457,15 +465,15 @@ $ curl http://localhost:8889/v1/wallet/list_keys
 
 ## wallet_get_public_keys
 
-列出所有钱包中的所有公钥.
+List all public keys in all wallets.
 
-### wallet_get_public_keys 用法示例
+### wallet_get_public_keys usage example
 
 ```bash
 $ curl http://localhost:8889/v1/wallet/get_public_keys 
 ```
 
-### wallet_get_public_keys 结果示例
+### wallet_get_public_keys result example
 
 ```json
 ["EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV"]
@@ -473,15 +481,15 @@ $ curl http://localhost:8889/v1/wallet/get_public_keys
 
 ## wallet_set_timeout
 
-设置钱包自动锁定超时（以秒为单位）.
+Set the wallet auto lock timeout (in seconds).
 
-### wallet_set_timeout 用法示例
+### wallet_set_timeout usage example
 
 ```bash
 $ curl http://localhost:8889/v1/wallet/set_timeout -X POST -d '10'
 ```
 
-### wallet_set_timeout 结果示例
+### wallet_set_timeout result example
 
 ```json
 {}
@@ -489,15 +497,15 @@ $ curl http://localhost:8889/v1/wallet/set_timeout -X POST -d '10'
 
 ## wallet_sign_trx
 
-给定一个事务数组的签名事务，需要公钥和链ID.
+Given the signature transaction of a transaction array, the public key and Chain ID are required
 
-### wallet_sign_trx 用法示例
+### wallet_sign_trx usage example
 
 ```bash
 $ curl http://localhost:8889/v1/wallet/sign_transaction -X POST -d '[{"ref_block_num":21453,"ref_block_prefix":3165644999,"expiration":"2017-12-08T10:28:49","scope":["initb","initc"],"read_scope":[],"messages":[{"code":"currency","type":"transfer","authorization":[{"account":"initb","permission":"active"}],"data":"000000008093dd74000000000094dd74e803000000000000"}],"signatures":[]}, ["EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV"], ""]'```
 ```
 
-### wallet_sign_trx 结果示例
+### wallet_sign_trx result example
 
 ```json
 {
