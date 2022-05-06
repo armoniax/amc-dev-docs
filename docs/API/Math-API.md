@@ -47,10 +47,10 @@ Define basic mathematical operations that use higher abstraction.
 
     > void diveq_i128	(uint128_t * self, const uint128_t *  other )   
     
-        将两个128位无符号整数相除，并将该值分配给第一个参数。如果orther值为0，它会抛出异常。   
-    - 参数
-        - self 指向分子的指针。它将被替换为结果
-        - other 指向分母的指针　　　
+        Divide two 128 bit unsigned integers and assign the value to the first parameter. If the other value is 0, it throws an exception.   
+    - parameter
+        - self a pointer to molecule. It will be replaced with the result.
+        - other a pointer to denominator　　　
 
 Example:
 
@@ -65,12 +65,12 @@ printi128(self); // Output: 1
 
     > uint64_t double_add( uint64_t a, uint64_t b)    
     
-        获得两个double之间的加法结果，解析为64位无符号整数此函数首先将两个输入重新解码为双精度（50个十进制数字精度），将它们相加，然后reinterpret_cast将结果重新解析为64位无符号整数。　　　
-    - 参数
-        - a 双精度解释为64位无符号整数
-        - b 双精度解释为64位无符号整数
-    - 返回
-        - reinterpret_cast将相加得到的64位无符号整数的结果
+        The addition result between two double is obtained and parsed into 64 bit unsigned integer. This function first decodes the two inputs into double precision (50 decimal digit precision), adds them, and then reinterpret_ Cast re parses the result into a 64 bit unsigned integer.　　　
+    - parameter
+        - a double precision is interpreted as a 64 bit unsigned integer
+        - b double precision is interpreted as a 64 bit unsigned integer
+    - return
+        - reinterpret_cast add the result of the 64 bit unsigned integer
         　　　　
 
 Example:
@@ -85,12 +85,12 @@ printd(res); // Output: 3
     > uint64_t double_div(uint64_t a, uint64_t 	b )     
     
         得到两个双精度解的结果，解释为64位无符号整数该函数首先将两个输入重新解码为双精度（50位十进制数字精度），用分母分隔分子，然后将结果重新解释为64位无符号整数。 如果b为零（在reinterpret_cast加倍后）将引发错误.
-    - 参数
-        - a 双分子解释为64位无符号整数
-        - b 双分母被解释为64位无符号整数
-    - 返回
-        - 相除的结果reinterpret_cast转换为64位无符号整数　
-        　　
+    - parameter
+        - a double molecules are interpreted as 64 bit unsigned integers
+        - b double denominators are interpreted as 64 bit unsigned integers
+    - return
+        - result of division reinterpret_cast is converted to unsigned integer　
+    
 Example:
 
 ```c++
@@ -101,10 +101,10 @@ printd(a); // Output: 0.1
     > uint32_t double_eq(uint64_t a, uint64_t 	b )     
     
         获取两个double之间的相等检查结果在进行相等检查之前，此函数将首先重新解释两个输入以重复（50位十进制数字精度）    
-    - 参数
+    - parameter
         - a 双精度解析为64位无符号整数
         - b 双精度解析为64位无符号整数
-    - 返回
+    - return
         - 如果第一个输入等于第二个输入，则为1，否则为0　　
         　
 Example:
@@ -119,10 +119,10 @@ printi(res); // Output: 0
     > uint32_t double_gt(uint64_t a, uint64_t 	b )     
     
         两个双精度进行大于比较获得大的一个，此函数首先将两个输入重新解释为双精度（50个十进制数精度）。    
-    - 参数
+    - parameter
         - a 双精度解析为64位无符号整数
         - b 双精度解析为64位无符号整数
-    - 返回
+    - return
         - 如果第一个输入大于于第二个输入，则为1，否则为0　　
         　
 Example:
@@ -138,10 +138,10 @@ printi(res); // Output: 0
     > uint32_t double_lt(uint64_t a, uint64_t 	b )     
     
         获得两个双精度小于比较的结果，该函数首先将两个输入重新解码为双精度（50个十进制数字精度）。    
-    - 参数
+    - parameter
         - a 双精度解析为64位无符号整数
         - b 双精度解析为64位无符号整数
-    - 返回
+    - return
         - 如果第一个输入小于于第二个输入，则为1，否则为0
         　　　　
 Example:
@@ -157,10 +157,10 @@ printi(res); // Output: 1
     > uint64_t double_mult(uint64_t a, uint64_t 	b )     
     
         获得两个double之间的乘法结果，解释为64位无符号整数此函数首先将两个输入重新解码为双精度（50位十进制精度），然后将它们相乘，然后reinterpret_cast将结果重新解析为64位无符号整数。   
-    - 参数
+    - parameter
         - a 双精度解析为64位无符号整数
         - b 双精度解析为64位无符号整数
-    - 返回
+    - return
         - 相乘的结果reinterpret_cast转换为64位无符号整数
         　　　
 Example:
@@ -175,9 +175,9 @@ printd(res); // Output: 2.5
     > uint64_t double_to_i64(uint64_t a )     
     
         将double（解释为64位无符号整数）转换为64位无符号整数。 该函数首先将输入重新解码为双精度（50位十进制数字精度），然后将其转换为双精度，然后将其重新解码为64位无符号整数。    
-    - 参数
+    - parameter
         - a 双精度解析为64位无符号整数
-    - 返回
+    - return
         -　64位无符号整数转换结果　
         　　
 Example:
@@ -192,9 +192,9 @@ printi(res); // Output: 2
     > uint64_t i64_to_double(uint64_t a )     
     
         将double（解释为64位无符号整数）转换为64位无符号整数。 该函数首先将输入重新解码为双精度（50位十进制数字精度），然后将其转换为双精度，然后将其重新解码为64位无符号整数。    
-    - 参数
+    - parameter
         - a 双精度解析为64位无符号整数
-    - 返回
+    - return
         -　double类型转换结果　　　
 
 Example:
@@ -207,10 +207,10 @@ printd(res); // Output: 3
   > uint64_t multeq_i128(uint128_t *  self, const uint128_t *   other )     
     
         将两个128位无符号整数相乘，并将该值赋给第一个参数。
-  - 参数
+  - parameter
     - self 指向要相乘的值的指针。它将被替换为结果
     - other 指向要相乘的值的指针。
-  - 返回
+  - return
     -　double类型转换结果　　　
 
 Example:
@@ -281,10 +281,10 @@ std::cout << self; // Output: 1
   > T eosio::max(const T& a,const T& b )		
         
         获取最大值。
-  - 参数
+  - parameter
       - a　比较值
       - b　比较值
-  - 返回
+  - return
     获取a和b中更大的一个. 如果相等返回a
 Example:
 ```
@@ -298,10 +298,10 @@ std::cout << max(a, b); // Output: 2
    > T eosio::min(const T& a, const T& b)		
 
     获取更小的一个值
-   - 参数
+   - parameter
      - a 比较值
      - b 比较值
-   - 返回
+   - return
         获取a和b中更小的一个. 如果相等返回a
 Example:
 ```
@@ -314,7 +314,7 @@ std::cout << min(a, b); // Output: 1
    > void eosio::multeq	(uint128_t& self, const uint128_t& other )	 <span class="mlabel">inline</span>
 
     将两个128位无符号整数相乘，并将该值赋给第一个参数。 这是对multeq_i128 Math C API的封装.
-   - 参数
+   - parameter
       - self	相乘的值. 它的值将被结果替代。
       - other	相乘的值.
 Example:
