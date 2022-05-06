@@ -1,15 +1,19 @@
 # Transaction API
 
-定义用于发送事务和内联消息的API
+Define APIs for sending transactions and inline messages
+
 ## Transaction C API
-定义用于发送事务的API
+
+Defines the API used to send transactions
 
 ## Transaction CPP API  
-类型安全的Trasaction C API的C++封装
 
-### 详细描述
+Safe Transaction C++ encapsulation for C API 
 
-A EOS.IO事务具有以下抽象结构：
+### Description
+
+AMAX.IO transaction has the following abstract structure:：
+
 ```C++
 struct transaction {
   Name scope[]; 
@@ -18,14 +22,14 @@ struct transaction {
 };
 ```
 
-该API使您的合约能够构建并且发送交易.
+This API enables your contract to build and send transactions.
 
-延期交易直到未来的区块才会被处理。因此，只要它们看起来形成良好，它们就可以不影响其父交易的成功。如果任何其他情况导致父事务被标记为失败，那么延期事务将永远不会被处理。
+Deferred transactions will not be processed until future blocks appear. Therefore, as long as they are well formed, they won't affect the success of their parent transaction. If any other condition causes the parent transaction to be marked as failed, the deferred transaction will never be processed.
 
-延期交易必须遵守父交易可用的权限，或者将来可以委托给合约帐户供将来使用。
+Deferred transactions must comply with the permissions available to the parent transaction or can be delegated to the contract account for future use.
 
-内联消息允许一个合约向另一个合约发送一个消息，该消息在当前消息处理结束后立即处理，使得父事务的成功或失败取决于消息的成功。如果内联消息在处理中失败，那么根源于该块的整个事务和消息树将被标记为失败，并且数据库上的任何影响都不会持续。
+Inline message allows one contract to send a message to another contract. The message is processed immediately after the current message is processed, so that the success or failure of the parent transaction depends on the success of the message. If the inline message fails in processing, the entire transaction and message tree rooted in the block will be marked as failed, and any impact on the database will not last.
 
-由于这一点以及事务应用程序的并行性质，内联消息可能不会影响未在其父事务范围中列出的任何范围。他们也可能不会读取其父事务范围或readScope中未列出的任何范围。
+Because of this and the parallel nature of transactional applications, inline messages may not affect any scopes that are not listed in their parent transaction scopes. They may also not read their parent transaction scope or any scope not listed in readScope.
 
-内联消息和延期交易必须遵守父交易可用的权限，或者将来可以委托给合同帐户供将来使用。
+Inline messages and deferred transactions must comply with the permissions available to the parent transaction, or can be delegated to the contract account for future use.
