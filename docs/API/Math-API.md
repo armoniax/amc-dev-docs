@@ -226,22 +226,22 @@ printi128(self); // Output: 10000
 
 ## Math CPP API   
 
-    定义常用的数学函数和帮助器类型.
+    Define common functions and helper types.
 
 <h5>Fixed Point</h5>
 
-    定点变量的32,64,128,256位版本
+    32,64128256 bit version of fixed-point variables
 
 <h5>Real number</h5>
 
-    带有基本操作符的实数数据类型。 封装double类Math C API.
+    Real data type with basic operator. Encapsulate double class math C API
 
-<h2>类</h2>
+<h2>class</h2>
 <h5>struct  	eosio::uint128</h5>
         
-    封装了uint128整数并定义常见运算符重载的结构。
+    Encapsulates the uint128 integer and defines the structure of common operator overloading.
 
-<h2>函数</h2>
+<h2>function</h2>
 
 ##### void [eosio::multeq](#multeq) (uint128_t& self, const uint128_t& other)
  	封装了multeq_i128　Math C API。
