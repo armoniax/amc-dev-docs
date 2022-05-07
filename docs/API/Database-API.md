@@ -6,24 +6,24 @@ Store and retrieve the data of Armonia blockchain. It organizes data according t
 
 
 ## Database C API    
- 数据库的C语言接口.
+C API of database.
 
 ### Description
 
 
-- code - 具有写入权限的帐户名称.
-    - scope - 存储数据的帐户.
-        - table - 正在存储的表的名称.
-            - record - 表中的一排.
+- code - the name of the account with write permission.
+    - scope - the account where the data is stored.
+        - table - name of the table being stored.
+            - record - a row in the table.
 
-每个事务都指定可以读取和/或写入的一组有效范围。正在运行的代码决定了可以写入的内容;因此，写入操作不允许您指定/配置代码。
+Each transaction specifies a set of valid ranges that can be read and / or written. The running code determines what can be written. Therefore, the write operation does not allow you to specify / configure the code.
 
-> 注意   
-尝试在有效范围和/或代码部分之外读取和/或写入会导致您的事务失败。
+>  Attention
+Attempting to read and / or write outside the valid range and / or part of the code will cause your transaction to fail.
 
-### 表类型
+### Table type
 
-这些是由索引的数量和大小确定的受支持的表类型：
+Supported table type determined by its number and size：
 1. dbi64
 
-databaseCpp提供了一个简单的接口，用于将任何固定大小的结构存储为数据库行。
+databasecpp provides a simple API for storing any fixed size structure as database rows.
