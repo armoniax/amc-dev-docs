@@ -84,7 +84,7 @@ printd(res); // Output: 3
 - <h5 id="double_div">double_div()</h5>
     > uint64_t double_div(uint64_t a, uint64_t 	b )     
     
-        得到两个双精度解的结果，解释为64位无符号整数该函数首先将两个输入重新解码为双精度（50位十进制数字精度），用分母分隔分子，然后将结果重新解释为64位无符号整数。 如果b为零（在reinterpret_cast加倍后）将引发错误.
+        The results of two double precision solutions are obtained and interpreted as 64 bit unsigned integers. The function first redecodes the two inputs into double precision (50 bit decimal precision), separates the numerators with denominators, and then reinterprets the results as 64 bit unsigned integers. If b is zero (after reinterpret_cast is doubled), an error will appear.
     - parameter
         - a double molecules are interpreted as 64 bit unsigned integers
         - b double denominators are interpreted as 64 bit unsigned integers
@@ -100,7 +100,12 @@ printd(a); // Output: 0.1
 - <h5 id="double_eq">double_eq()</h5>
     > uint32_t double_eq(uint64_t a, uint64_t 	b )     
     
-        获取两个double之间的相等检查结果在进行相等检查之前，此函数将首先重新解释两个输入以重复（50位十进制数字精度）    
+        获取两个double之间的相等检查结果在进行相等检查之前，此函数将首先重新解释两个输入以重复（50位十进制数字精度）Gets the result of the equality check between two doubles. Before performing the equality check, this function first reinterprets the two inputs to repeat (50 decimal precision)
+- parameter
+-A double resolution to 64 bit unsigned integer
+-B double resolution to 64 bit unsigned integer
+- return
+-1 if the first input is equal to the second input, otherwise 0    
     - parameter
         - a 双精度解析为64位无符号整数
         - b 双精度解析为64位无符号整数
