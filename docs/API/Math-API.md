@@ -67,8 +67,8 @@ printi128(self); // Output: 1
     
         The addition result between two double is obtained and parsed into 64 bit unsigned integer. This function first decodes the two inputs into double precision (50 decimal digit precision), adds them, and then reinterpret_ Cast re parses the result into a 64 bit unsigned integer.　　　
     - parameter
-        - a double precision is interpreted as a 64 bit unsigned integer
-        - b double precision is interpreted as a 64 bit unsigned integer
+        - a double is interpreted as 64 bit unsigned integer
+        - b double is interpreted as 64 bit unsigned integer
     - return
         - reinterpret_cast add the result of the 64 bit unsigned integer
         　　　　
@@ -84,7 +84,7 @@ printd(res); // Output: 3
 - <h5 id="double_div">double_div()</h5>
     > uint64_t double_div(uint64_t a, uint64_t 	b )     
     
-        The results of two double precision solutions are obtained and interpreted as 64 bit unsigned integers. The function first redecodes the two inputs into double precision (50 bit decimal precision), separates the numerators with denominators, and then reinterprets the results as 64 bit unsigned integers. If b is zero (after reinterpret_cast is doubled), an error will appear.
+        The results of two double are obtained and interpreted as 64 bit unsigned integers. The function first redecodes the two inputs into double (50 bit decimal precision), separates the numerators with denominators, and then reinterprets the results as 64 bit unsigned integers. If b is zero (after reinterpret_cast is doubled), an error will appear.
     - parameter
         - a double molecules are interpreted as 64 bit unsigned integers
         - b double denominators are interpreted as 64 bit unsigned integers
@@ -100,17 +100,12 @@ printd(a); // Output: 0.1
 - <h5 id="double_eq">double_eq()</h5>
     > uint32_t double_eq(uint64_t a, uint64_t 	b )     
     
-        获取两个double之间的相等检查结果在进行相等检查之前，此函数将首先重新解释两个输入以重复（50位十进制数字精度）Gets the result of the equality check between two doubles. Before performing the equality check, this function first reinterprets the two inputs to repeat (50 decimal precision)
-- parameter
--A double resolution to 64 bit unsigned integer
--B double resolution to 64 bit unsigned integer
-- return
--1 if the first input is equal to the second input, otherwise 0    
+        Gets the result of the equality check between two doubles. Before performing the equality check, this function first reinterprets the two inputs to repeat (50 decimal precision)
     - parameter
-        - a 双精度解析为64位无符号整数
-        - b 双精度解析为64位无符号整数
+        - a double is interpreted as 64 bit unsigned integer
+        - b double is interpreted as 64 bit unsigned integer
     - return
-        - 如果第一个输入等于第二个输入，则为1，否则为0　　
+        - If the first input is equal to the second input, it's 1, otherwise it's 0.　
         　
 Example:
 
@@ -123,12 +118,12 @@ printi(res); // Output: 0
 - <h5 id="double_gt">double_gt()</h5>
     > uint32_t double_gt(uint64_t a, uint64_t 	b )     
     
-        两个双精度进行大于比较获得大的一个，此函数首先将两个输入重新解释为双精度（50个十进制数精度）。    
+        Two double are compared to obtain the larger one. This function first reinterprets the two inputs as double (50 decimal precision).    
     - parameter
-        - a 双精度解析为64位无符号整数
-        - b 双精度解析为64位无符号整数
+        - a double is interpreted as 64 bit unsigned integer
+        - b double is interpreted as 64 bit unsigned integer
     - return
-        - 如果第一个输入大于于第二个输入，则为1，否则为0　　
+        - If the first input is larger than the second input, it's 1, otherwise it's 0.　　
         　
 Example:
 
@@ -142,12 +137,12 @@ printi(res); // Output: 0
 - <h5 id="double_lt">double_lt()</h5>
     > uint32_t double_lt(uint64_t a, uint64_t 	b )     
     
-        获得两个双精度小于比较的结果，该函数首先将两个输入重新解码为双精度（50个十进制数字精度）。    
+        Two double are compared to obtain the smaller one. This function first reinterprets the two inputs as double (50 decimal precision).    
     - parameter
-        - a 双精度解析为64位无符号整数
-        - b 双精度解析为64位无符号整数
+        - a double is interpreted as 64 bit unsigned integer
+        - b double is interpreted as 64 bit unsigned integer
     - return
-        - 如果第一个输入小于于第二个输入，则为1，否则为0
+        - If the first input is smaller than the second input, it's 1, otherwise it's 0.
         　　　　
 Example:
 
@@ -161,12 +156,12 @@ printi(res); // Output: 1
 - <h5 id="double_mult">double_mult()</h5>
     > uint64_t double_mult(uint64_t a, uint64_t 	b )     
     
-        获得两个double之间的乘法结果，解释为64位无符号整数此函数首先将两个输入重新解码为双精度（50位十进制精度），然后将它们相乘，然后reinterpret_cast将结果重新解析为64位无符号整数。   
+        Obtain the multiplication result between two doubles and interpret it as 64 bit unsigned integer. This function first decodes the two inputs into double (50 bit decimal precision), then multiplies them, and then reinterpret_ cast interprets the result into a 64 bit unsigned integer.   
     - parameter
-        - a 双精度解析为64位无符号整数
-        - b 双精度解析为64位无符号整数
+        - a double is interpreted as 64 bit unsigned integer
+        - b double is interpreted as 64 bit unsigned integer
     - return
-        - 相乘的结果reinterpret_cast转换为64位无符号整数
+        - reinterpret_cast interprets the result into a 64 bit unsigned integer
         　　　
 Example:
 
@@ -181,7 +176,7 @@ printd(res); // Output: 2.5
     
         将double（解释为64位无符号整数）转换为64位无符号整数。 该函数首先将输入重新解码为双精度（50位十进制数字精度），然后将其转换为双精度，然后将其重新解码为64位无符号整数。    
     - parameter
-        - a 双精度解析为64位无符号整数
+        - a double is interpreted as 64 bit unsigned integer
     - return
         -　64位无符号整数转换结果　
         　　
@@ -198,7 +193,7 @@ printi(res); // Output: 2
     
         将double（解释为64位无符号整数）转换为64位无符号整数。 该函数首先将输入重新解码为双精度（50位十进制数字精度），然后将其转换为双精度，然后将其重新解码为64位无符号整数。    
     - parameter
-        - a 双精度解析为64位无符号整数
+        - a double is interpreted as 64 bit unsigned integer
     - return
         -　double类型转换结果　　　
 
