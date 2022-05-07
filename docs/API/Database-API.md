@@ -1,20 +1,18 @@
 # Database API
 
-Store and retrieve the data of Armonia blockchain. It organizes data according to the following broad structure.
+Store and retrieve the data of Armonia blockchain. It organizes data according to the following structure.
 
 # Module
-
 
 ## Database C API    
 C API of database.
 
 ### Description
 
-
 - code - the name of the account with write permission.
-    - scope - the account where the data is stored.
-        - table - name of the table being stored.
-            - record - a row in the table.
+- scope - the account where the data is stored.
+- table - name of the table being stored.
+- record - a row in the table.
 
 Each transaction specifies a set of valid ranges that can be read and / or written. The running code determines what can be written. Therefore, the write operation does not allow you to specify / configure the code.
 
@@ -26,4 +24,4 @@ Each transaction specifies a set of valid ranges that can be read and / or writt
 Supported table type determined by its number and size：
 1. dbi64
 
-databasecpp provides a simple API for storing any fixed size structure as database rows.
+databasecpp provides a simple API for storing fixed size structure as database rows.
