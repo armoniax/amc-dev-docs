@@ -174,11 +174,11 @@ printd(res); // Output: 2.5
 - <h5 id="double_to_i64">double_to_i64()</h5>
     > uint64_t double_to_i64(uint64_t a )     
     
-        将double（解释为64位无符号整数）转换为64位无符号整数。 该函数首先将输入重新解码为双精度（50位十进制数字精度），然后将其转换为双精度，然后将其重新解码为64位无符号整数。    
+        Convert a double (interpreted as a 64 bit unsigned integer) to a 64 bit unsigned integer. This function first redecodes the input to double (50 bit decimal precision), then converts it to double, and then redecodes it to 64 bit unsigned integer.    
     - parameter
         - a double is interpreted as 64 bit unsigned integer
     - return
-        -　64位无符号整数转换结果　
+        - 64 bit unsigned integer　
         　　
 Example:
 
@@ -191,11 +191,11 @@ printi(res); // Output: 2
 - <h5 id="i64_to_double">i64_to_double()</h5>
     > uint64_t i64_to_double(uint64_t a )     
     
-        将double（解释为64位无符号整数）转换为64位无符号整数。 该函数首先将输入重新解码为双精度（50位十进制数字精度），然后将其转换为双精度，然后将其重新解码为64位无符号整数。    
+        Convert a double (interpreted as a 64 bit unsigned integer) to a 64 bit unsigned integer. This function first redecodes the input to double (50 bit decimal precision), then converts it to double, and then redecodes it to 64 bit unsigned integer.    
     - parameter
         - a double is interpreted as 64 bit unsigned integer
     - return
-        -　double类型转换结果　　　
+        -　double conversion result　　　
 
 Example:
 
@@ -206,12 +206,12 @@ printd(res); // Output: 3
 <h5 id="multeq_i128">multeq_i128()</h5>
   > uint64_t multeq_i128(uint128_t *  self, const uint128_t *   other )     
     
-        将两个128位无符号整数相乘，并将该值赋给第一个参数。
+        Multiplies two 128 bit unsigned integers and assigns the value to the first parameter.
   - parameter
-    - self 指向要相乘的值的指针。它将被替换为结果
-    - other 指向要相乘的值的指针。
+    - self pointer to the value to be multiplied. It will be replaced with the result.
+    - other pointer to the value to be multiplied
   - return
-    -　double类型转换结果　　　
+    -　double conversion result　　　
 
 Example:
 
