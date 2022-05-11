@@ -2,13 +2,13 @@
 
 定义用于查询操作属性的C语言API.
 
-# 模块
+# Module
 
 
 ## Action C API   
 定义用于查询操作属性的API.
 
-###　函数
+### Function
 
 ##### uint32_t [read_action_data](#read_action_data) (void *msg, uint32_t len)
 
@@ -57,9 +57,9 @@
 
  	获取该动作的当前接收者。
  	
-### 详细描述
+### Description
 
-EOS.IO的action具有以下抽象结构：    
+AMAX's action具有以下抽象结构：    
 
 ```c++
 struct action {
@@ -71,7 +71,7 @@ struct action {
 ```
     该API使您的合同能够检查当前操作的字段并相应采取行动。
 
-例子：
+Example：
 
 ```c++
 // Assume this action is used for the following examples:
@@ -96,14 +96,14 @@ require_auth(N(initb)); // Throws an exception
 print(now()); // Output: timestamp of last accepted block
 ```
 
-### 函数文档
+### Function docs
 
 <h5 id="action_data_size">action_data_size()</h5>
    > uint32_t action_data_size()
 
     获取当前动作的数据字段的长度此方法对动态大小的action很有用
 
-   - 返回    
+   - return    
     当前操作的数据字段的长度
     
 <h5 id="current_receiver">current_receiver()</h5>
@@ -111,7 +111,7 @@ print(now()); // Output: timestamp of last accepted block
 
     获取action的接收者。
 
-   - 返回
+   - return
    
      当前action接收者的帐户
      
@@ -120,7 +120,7 @@ print(now()); // Output: timestamp of last accepted block
 
     获取当前action的发送者账户
 
-   - 返回
+   - return
         当前action发送者的帐户
 
 <h5 id="has_auth">has_auth()</h5>
@@ -129,10 +129,10 @@ print(now()); // Output: timestamp of last accepted block
 <h5 id="publication_time">publication_time()</h5>
    > time publication_time()
 
-    返回publication_time 1970年以秒为单位的时间.
+    return publication_time 1970年以秒为单位的时间.
 
-   - 返回       
-    返回publication_time 1970年以秒为单位的时间.
+   - return       
+    return publication_time 1970年以秒为单位的时间.
     
 <h5 id="read_action_data">read_action_data()</h5>
    > uint32_t read_action_data(void * msg, uint32_t len)		
@@ -142,7 +142,7 @@ print(now()); // Output: timestamp of last accepted block
    - 参数    
         - msg	- 一个指针，最多可以复制当前操作数据的len个字节    
         - len	- len将要复制的当前操作数据    
-   - 返回    
+   - return    
         复制到msg的字节数
         
 <h5 id="require_auth">require_auth()</h5>
@@ -207,14 +207,14 @@ print(now()); // Output: timestamp of last accepted block
 类型安全的对Action C API的C++封装.
 
 
-### 类
+### Class
 ##### struct  [eosio::permission_level]()
  
 ##### struct  [eosio::action]()
  
 ##### struct  [eosio::action_meta< Account, Name >]()
  
-### 函数
+### Function
 
 ###### template< typename T \>
 > T 	eosio::[current_action_data](#current_action_data) ()
@@ -237,12 +237,12 @@ void 	eosio::[require_auth](#require_auth) (const permission_level &level)
 void 	eosio::[dispatch_inline](#dispatch_inline) (permission_level perm, account_name code, action_name act, void(T::*)(Args...), std::tuple< Args... > args)
  
 
-详细描述
+### Description
 ---
-> 注意：
+> Note：
 > Action C API中有一些方法可以直接从C ++中使用.
 
-###　函数文档
+### Function docs
 
 <h5 id="current_action_data">current_action_data()</h5>
 > template< typename T \>    
@@ -250,7 +250,7 @@ void 	eosio::[dispatch_inline](#dispatch_inline) (permission_level perm, account
 
     此方法尝试将操作主体重新解释为T类型。这仅在操作没有动态字段且T类型的结构包装已正确定义时才起作用。
 
-例子:
+Example:
 ```
 struct dummy_action {
   char a; //1
@@ -275,10 +275,10 @@ dummy_action msg = current_action_data<dummy_action>();
 
     这种辅助方法使您能够通过一次调用将多个账户添加到要通知列表的账户，而不必多次调用类似的C API。
 
-> 注意
-action.code也被视为通知帐户集的一部分
+> Note:
+> action.code也被视为通知帐户集的一部分
 
-例子:
+Example:
 ```
 require_recipient(N(Account1), N(Account2), N(Account3)); // throws exception if any of them not in set.
 ```
