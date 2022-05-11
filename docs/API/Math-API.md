@@ -222,7 +222,7 @@ printi128(self); // Output: 10000
 ```
 
 
-## Math CPP API   
+## Math C++ API   
 
     Define common functions and helper types.
 
