@@ -26,8 +26,10 @@ Armonia document is translated and maintained by Armonia community. This documen
 ### Smart Contract Development
 
 * [Smart contract API](智能合约.md)
+    * [AMAX-RPC](API/AMAX-RPC.md) - how to use HTTP RPC.
     * [Account API](API/Account-API.md) - querying account data.
     * [Action API](API/Account-API.md) - defining the API used to query action attributes.
+    * [Builtin Types](API/Types.md) - specifying typedefs and aliases.
     * [Chain API](API/Chain-API.md) - querying the internal state of the chain.
     * [Console API](API/Console-API.md) - enabling applications to log / print messages.
     * [Database API](API/Database-API.md) - storing and retrieving The data API of IO blockchain organizes data according to the following broad structure.
@@ -35,5 +37,4 @@ Armonia document is translated and maintained by Armonia community. This documen
     * [System API](API/System-API.md) - defining the API used to interact with system level internal functions.
     * [Token API](API/Token-API.md) - defining the ABI used to interact with standard compliant token messages and database tables.
     * [Transaction API](API/Transaction-API.md) - defining the API used to send transactions and messages.
-    * [Builtin Types](API/Types.md) - specifying typedefs and aliases.
-
+   
