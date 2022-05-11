@@ -234,12 +234,12 @@ printi128(self); // Output: 10000
 
     Real data type with basic operator. Encapsulate double class math C API
 
-<h2>class</h2>
+<h2>Class</h2>
 <h5>struct  	eosio::uint128</h5>
         
     Encapsulates the uint128 integer and defines the structure of common operator overloading.
 
-<h2>function</h2>
+<h2>Function</h2>
 
 ##### void [eosio::multeq](#multeq) (uint128_t& self, const uint128_t& other)
  	Encapsulate multeq_i128　Math C API.
@@ -264,7 +264,7 @@ T 	[eosio::max](#max) (const T& a, const T& b)
 
     Divide two 128 bit unsigned integers and assign the value to the first parameter. If the other value is zero, it throws an exception. It encapsulates diveq_ i128 Math C API.  
  
-  - Parameters
+  - Parameter
        - self	Molecule. Its value will be replaced by the result.
        - other	Denominator.
  
