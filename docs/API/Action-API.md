@@ -187,23 +187,23 @@ print(now()); // Output: timestamp of last accepted block
 <h5 id="send_context_free_inline">send_context_free_inline()</h5>
    > void send_context_free_inline(char * serialized_action, size_t size)		
 
-    在此操作的父事务处理的上下文中发送内联上下文免费操作
+    Send free inline in the context of the parent transaction of this operation
 
    - parameter    
-        - serialized_action	- 序列化操作    
-        - size	- 序列化操作的大小，以字节为单位
+        - serialized_action	- serialization operation    
+        - size	- the size of the serialization operation, in bytes
 
 <h5 id="send_inline">send_inline()</h5>
    >void send_inline(char * serialized_action, size_t size)
 
-    在此操作的父事务处理的上下文中发送内联操作
+    Send free inline in the context of the parent transaction of this operation
 
    - parameter    
-        - serialized_action	- 序列化操作    
-        - size	- 序列化操作的大小，以字节为单位   
+        - serialized_action	- serialization operation    
+        - size	- The size of the serialization operation, in bytes   
 
 ## Action CPP API   
-类型安全的对Action C API的C++封装.
+Type safe C++ encapsulation of Action C API
 
 
 ### Class
