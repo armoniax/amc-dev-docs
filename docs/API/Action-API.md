@@ -1,37 +1,36 @@
 # Action API
 
-定义用于查询操作属性的C语言API.
+Define the C API for querying operation properties.
 
 # Module
 
 
 ## Action C API   
-定义用于查询操作属性的API.
+Defines the API for querying operation properties.
 
 ### Function
 
 ##### uint32_t [read_action_data](#read_action_data) (void *msg, uint32_t len)
 
- 	将当前操作数据复制到指定的位置.
+ 	Copy the current operation data to the specified location.
  
 ##### uint32_t [action_data_size](#action_data_size) ()
 
- 	获取当前操作的数据字段的长度。
-
+ 	Get the size of the current operation's data field.
  
 ##### void [require_recipient](#require_recipient) (account_name name)
  	
- 	将指定的帐户添加到要通知的帐户集。
+ 	Add the specified account to the set of accounts to be notified.
  
 ##### void [require_auth](#require_auth) (account_name name)
 
- 	验证指定的帐户是否存在于所提供的一组授权中。
+ 	Verify that the specified account exists in the set of authorizations provided.
  
 ##### bool [has_auth](#has_auth) (account_name name)
  
 ##### void [require_auth2](#require_auth2) (account_name name, permission_name permission)
  	
- 	验证指定的帐户是否存在于所提供的一组授权中。
+ 	Verify that the specified account exists in the set of authorizations provided.
  
 ##### void [send_inline](#send_inline) (char *serialized_action, size_t size)
  
@@ -39,27 +38,27 @@
  
 ##### void [require_write_lock](#require_write_lock) (account_name name)
  	
- 	验证该名称存在于持有的写锁集合中。
+ 	Verify that the name exists in the set of write locks held.
  
 ##### void [require_read_lock](#require_read_lock) (account_name name)
 
- 	验证该名称存在于保持的读锁集合中。
+ 	Verify that the name exists in the set of write locks held.
  
 ##### time [publication_time](#publication_time) ()
 
- 	获取发布时间。
+ 	Get the publication time.
  
 ##### account_name [current_sender](#current_sender) ()
 
- 	获取操作的执行者。
+ 	Get the current sender of the operation.
  
 ##### account_name [current_receiver](#current_receiver) ()
 
- 	获取该动作的当前接收者。
+ 	Get the current receiver of the operation.
  	
 ### Description
 
-AMAX's action具有以下抽象结构：    
+AMAX's action has the following abstract structure：    
 
 ```c++
 struct action {
