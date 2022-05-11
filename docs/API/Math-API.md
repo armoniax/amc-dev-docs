@@ -53,7 +53,6 @@ Define basic mathematical operations that use higher abstraction.
         - other a pointer to denominator　　　
 
 Example:
-
 ```c++
 uint128_t self(100);
 uint128_t other(100);
@@ -74,7 +73,6 @@ printi128(self); // Output: 1
         　　　　
 
 Example:
-
 ```c++
 uint64_t a = double_div( i64_to_double(5), i64_to_double(10) );
 uint64_t b = double_div( i64_to_double(5), i64_to_double(2) );
@@ -92,7 +90,6 @@ printd(res); // Output: 3
         - result of division reinterpret_cast is converted to unsigned integer　
     
 Example:
-
 ```c++
 uint64_t a = double_div( i64_to_double(10), i64_to_double(100) );
 printd(a); // Output: 0.1
@@ -108,7 +105,6 @@ printd(a); // Output: 0.1
         - If the first input is equal to the second input, it's 1, otherwise it's 0.　
         　
 Example:
-
 ```c++
 int64_t a = double_div( i64_to_double(10), i64_to_double(10) );
 uint64_t b = double_div( i64_to_double(5), i64_to_double(2) );
@@ -126,7 +122,6 @@ printi(res); // Output: 0
         - If the first input is larger than the second input, it's 1, otherwise it's 0.　　
         　
 Example:
-
 ```c++
 uint64_t a = double_div( i64_to_double(10), i64_to_double(10) );
 uint64_t b = double_div( i64_to_double(5), i64_to_double(2) );
@@ -145,7 +140,6 @@ printi(res); // Output: 0
         - If the first input is smaller than the second input, it's 1, otherwise it's 0.
         　　　　
 Example:
-
 ```c++
 uint64_t a = double_div( i64_to_double(10), i64_to_double(10) );
 uint64_t b = double_div( i64_to_double(5), i64_to_double(2) );
@@ -164,7 +158,6 @@ printi(res); // Output: 1
         - reinterpret_cast interprets the result into a 64 bit unsigned integer
         　　　
 Example:
-
 ```c++
 uint64_t a = double_div( i64_to_double(10), i64_to_double(10) );
 uint64_t b = double_div( i64_to_double(5), i64_to_double(2) );
@@ -181,7 +174,6 @@ printd(res); // Output: 2.5
         - 64 bit unsigned integer　
         　　
 Example:
-
 ```c++
 uint64_t a = double_div( i64_to_double(5), i64_to_double(2) );
 uint64_t res = double_to_i64( a );
@@ -198,7 +190,6 @@ printi(res); // Output: 2
         -　double conversion result　　　
 
 Example:
-
 ```c++
 uint64_t res = i64_to_double( 3 );
 printd(res); // Output: 3
@@ -215,7 +206,6 @@ printd(res); // Output: 3
     -　double conversion result　　　
 
 Example:
-
 ```c++
 uint128_t self(100);
 uint128_t other(100);
