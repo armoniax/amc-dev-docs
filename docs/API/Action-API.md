@@ -127,28 +127,29 @@ print(now()); // Output: timestamp of last accepted block
 <h5 id="publication_time">publication_time()</h5>
    > time publication_time()
 
-    return publication_time 1970年以秒为单位的时间.
+    return publication_time time in seconds in 1970.
 
    - return       
-    return publication_time 1970年以秒为单位的时间.
+    return publication_time time in seconds in 1970.
     
 <h5 id="read_action_data">read_action_data()</h5>
    > uint32_t read_action_data(void * msg, uint32_t len)		
 
-    将当前操作数据的len个字节复制到指定的位置
+    Copy the len bytes of the current operation data to the specified location
 
-   - 参数    
-        - msg	- 一个指针，最多可以复制当前操作数据的len个字节    
-        - len	- len将要复制的当前操作数据    
+   - parameter    
+        - msg	- A pointer that can copy up to len bytes of the current operation data
+        - len	- len current operation data to be copied  
    - return    
-        复制到msg的字节数
+        Number of bytes copied to MSG
+
         
 <h5 id="require_auth">require_auth()</h5>
    > void require_auth(account_name name)
 
-    验证该操作中提供的身份验证集中是否存在该名称。 如果找不到，则throws
+    Verify that the name exists in the authentication set provided in the operation. If not found, throws
 
-   - 参数    
+   - parameter    
         name　- 待验证账户的名称
         
 <h5 id="require_auth2">require_auth2()</h5>
@@ -156,7 +157,7 @@ print(now()); // Output: timestamp of last accepted block
 
     验证该操作中提供的身份验证集中是否存在该名称。 如果找不到，则throws
 
-  - 参数    
+  - parameter    
     - name	- 待验证账户的名称    
     - permission	- 权限级别进行验证    
 
@@ -165,14 +166,14 @@ print(now()); // Output: timestamp of last accepted block
 
     验证该动作中保存的读锁的名称是否存在。 如果找不到，则throws
 
-   - 参数    
+   - parameter    
       - name	- 待验证账户的名称    
 <h5 id="require_recipient">require_recipient()</h5>
    > void require_recipient(account_name name)	
 
     将指定的帐户添加到要通知的帐户集
 
-   - 参数    
+   - parameter    
         - name	- 待验证账户的名称   
         
 <h5 id="require_write_lock">require_write_lock()</h5>
@@ -180,7 +181,7 @@ print(now()); // Output: timestamp of last accepted block
 
     验证该操作中保存的写锁集合中是否存在该名称。 如果找不到，则throws
 
-   - 参数    
+   - parameter    
        - name	- 待验证账户的名称
        
 <h5 id="send_context_free_inline">send_context_free_inline()</h5>
@@ -188,7 +189,7 @@ print(now()); // Output: timestamp of last accepted block
 
     在此操作的父事务处理的上下文中发送内联上下文免费操作
 
-   - 参数    
+   - parameter    
         - serialized_action	- 序列化操作    
         - size	- 序列化操作的大小，以字节为单位
 
@@ -197,7 +198,7 @@ print(now()); // Output: timestamp of last accepted block
 
     在此操作的父事务处理的上下文中发送内联操作
 
-   - 参数    
+   - parameter    
         - serialized_action	- 序列化操作    
         - size	- 序列化操作的大小，以字节为单位   
 
@@ -238,7 +239,7 @@ void 	eosio::[dispatch_inline](#dispatch_inline) (permission_level perm, account
 ### Description
 ---
 > Note：
-> Action C API中有一些方法可以直接从C ++中使用.
+> Action C API中有一些方法可以直接从C++中使用.
 
 ### Function docs
 
