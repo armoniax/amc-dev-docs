@@ -218,7 +218,7 @@ Type safe C++ encapsulation of Action C API
 ###### template< typename T \>
 > T 	eosio::[current_action_data](#current_action_data) ()
  	
- 	将行动主体解释为T型。
+ 	Explain the action subject as type T.
  
 ###### template< typename T \>
 T 	eosio::[unpack_action_data](#unpack_action_data) ()
@@ -227,7 +227,7 @@ T 	eosio::[unpack_action_data](#unpack_action_data) ()
 
 void eosio::[require_recipient](#require_recipient) (account_name name, accounts... remaining_accounts)
  	
- 	验证指定的帐户是否存在于一组通知帐户中。
+ 	Verify that the specified account exists in a set of notification accounts.
  
 void 	eosio::[require_auth](#require_auth) (const permission_level &level)
  
