@@ -207,6 +207,7 @@ printd(res); // Output: 3
   > uint64_t multeq_i128(uint128_t *  self, const uint128_t *   other )     
     
         Multiplies two 128 bit unsigned integers and assigns the value to the first parameter.
+        
   - parameter
     - self pointer to the value to be multiplied. It will be replaced with the result.
     - other pointer to the value to be multiplied
@@ -244,30 +245,31 @@ printi128(self); // Output: 10000
 <h2>function</h2>
 
 ##### void [eosio::multeq](#multeq) (uint128_t& self, const uint128_t& other)
- 	封装了multeq_i128　Math C API。
+ 	Encapsulate multeq_i128　Math C API.
 
 ##### void [eosio::diveq](#diveq) (uint128_t& self, const uint128_t& other)
- 	封装了diveq_i128 Math C API。
+ 	Encapsulate diveq_i128 Math C API.
 
 <h5>template<typename T ></h5>
 T 	[eosio::min](#min) (const T& a, const T& b)
  	
- 	定义了类似std::min()函数。
+ 	Define functions similar to std::min().
 
 <h5>template<typename T ></h5>
 T 	[eosio::max](#max) (const T& a, const T& b)
  	
- 	定义了类似std::max()函数。
+ 	Define functions similar to std::max().
 
-<h2>函数文档</h2>
+<h2>Function docs</h2>
 
 <h5 id="diveq">diveq()</h5>
   > void eosio::diveq	(uint128_t& self,const uint128_t& other) | inline      
 
-    将两个128位无符号整数相除，并将该值赋给第一个参数。 如果other值为零，它将抛出异常。 封装了Math C API的diveq_i128      
+    Divide two 128 bit unsigned integers and assign the value to the first parameter. If the other value is zero, it throws an exception. It encapsulates diveq_ i128 Math C API.  
+ 
   - Parameters
-       - self	分子. 它的值将被结果替代。
-       - other	分母。
+       - self	Molecule. Its value will be replaced by the result.
+       - other	Denominator.
 Example:
 ```
 uint128_t self(100);
@@ -280,12 +282,14 @@ std::cout << self; // Output: 1
   > template<typename T \>    
   > T eosio::max(const T& a,const T& b )		
         
-        获取最大值。
+        Get the larger value.
+ 
   - parameter
-      - a　比较值
-      - b　比较值
+      - a　comparison value
+      - b　comparison value
   - return
-    获取a和b中更大的一个. 如果相等返回a
+    Get the larger of a and b. If equal, return a.
+ 
 Example:
 ```
 uint128_t a(1);
@@ -297,12 +301,14 @@ std::cout << max(a, b); // Output: 2
    > template<typename T >   
    > T eosio::min(const T& a, const T& b)		
 
-    获取更小的一个值
+    Get the smaller value.
+ 
    - parameter
-     - a 比较值
-     - b 比较值
+     - a comparison value
+     - b comparison value
    - return
-        获取a和b中更小的一个. 如果相等返回a
+        Get the smaller of a and b. If equal, return a.
+ 
 Example:
 ```
 uint128_t a(1);
@@ -313,10 +319,11 @@ std::cout << min(a, b); // Output: 1
 <h5 id="multeq">multeq()</h5>
    > void eosio::multeq	(uint128_t& self, const uint128_t& other )	 <span class="mlabel">inline</span>
 
-    将两个128位无符号整数相乘，并将该值赋给第一个参数。 这是对multeq_i128 Math C API的封装.
+    Multiply two 128 bit unsigned integers and assign the value to the first parameter. It encapsulates multeq_i128 Math C API.
+ 
    - parameter
-      - self	相乘的值. 它的值将被结果替代。
-      - other	相乘的值.
+      - self	The value of multiplication. Its value will be replaced by the result.
+      - other	The value of multiplication.
 Example:
 ```
 uint128_t self(100);
