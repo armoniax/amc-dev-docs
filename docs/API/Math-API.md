@@ -260,6 +260,7 @@ T 	[eosio::max](#max) (const T& a, const T& b)
   - Parameters
        - self	Molecule. Its value will be replaced by the result.
        - other	Denominator.
+ 
 Example:
 ```
 uint128_t self(100);
@@ -314,6 +315,7 @@ std::cout << min(a, b); // Output: 1
    - parameter
       - self	The value of multiplication. Its value will be replaced by the result.
       - other	The value of multiplication.
+ 
 Example:
 ```
 uint128_t self(100);
