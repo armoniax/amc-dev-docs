@@ -7,7 +7,7 @@ Here is a list of all the modules:
 
 - [.system Armonia System Contract]() - main component to define system contract
 
-- [Smart contract API reference](Smart contract.md)  
+- [Smart contract API reference](SmartContract.md)  
 
   - [Account API](API/Account-API.md) - querying account data.
 

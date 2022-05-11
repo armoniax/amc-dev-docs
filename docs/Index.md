@@ -25,7 +25,7 @@ Armonia document is translated and maintained by Armonia community. This documen
 
 ### Smart Contract Development
 
-* [Smart contract API](智能合约.md)
+* [Smart contract API](SmartContract.md)
     * [AMAX-RPC](API/AMAX-RPC.md) - how to use HTTP RPC.
     * [Account API](API/Account-API.md) - querying account data.
     * [Action API](API/Account-API.md) - defining the API used to query action attributes.
