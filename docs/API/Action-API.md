@@ -68,7 +68,7 @@ struct action {
   bytes data; // opaque data processed by code
 };
 ```
-    该API使您的合同能够检查当前操作的字段并相应采取行动。
+    This API enables your contract to check the fields of the current operation and take action accordingly.
 
 Example：
 
@@ -100,27 +100,26 @@ print(now()); // Output: timestamp of last accepted block
 <h5 id="action_data_size">action_data_size()</h5>
    > uint32_t action_data_size()
 
-    获取当前动作的数据字段的长度此方法对动态大小的action很有用
+    Getting the length of the data field of the current action is very useful for dynamically sized action.
 
    - return    
-    当前操作的数据字段的长度
+    The size of the data field of the current operation.
     
 <h5 id="current_receiver">current_receiver()</h5>
    > account_name current_receiver()	
 
-    获取action的接收者。
+   Get the receiver of the action.
 
    - return
-   
-     当前action接收者的帐户
+     Account of the receiver of the current action
      
 <h5 id="current_sender">current_sender()</h5>
    > account_name current_sender()
 
-    获取当前action的发送者账户
+    Get the sender of the action.
 
    - return
-        当前action发送者的帐户
+     Account of the sender of the current action
 
 <h5 id="has_auth">has_auth()</h5>
    > bool has_auth(account_name name)
