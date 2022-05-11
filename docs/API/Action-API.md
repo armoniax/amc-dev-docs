@@ -147,42 +147,42 @@ print(now()); // Output: timestamp of last accepted block
 <h5 id="require_auth">require_auth()</h5>
    > void require_auth(account_name name)
 
-    Verify that the name exists in the authentication set provided in the operation. If not found, throws
+    Verify that the name exists in the authentication set provided in the operation. If not found, throws.
 
    - parameter    
-        name　- 待验证账户的名称
+        name　- name of the account to be verified
         
 <h5 id="require_auth2">require_auth2()</h5>
    >void require_auth2(account_name name,permission_name permission)		
 
-    验证该操作中提供的身份验证集中是否存在该名称。 如果找不到，则throws
+    Verify that the name exists in the authentication set provided in the operation. If not found, throws.
 
   - parameter    
-    - name	- 待验证账户的名称    
-    - permission	- 权限级别进行验证    
+    - name	- name of the account to be verified    
+    - permission	- verify the permission level    
 
 <h5 id="require_read_lock">require_read_lock()</h5>
    > void require_read_lock(account_name name)	
 
-    验证该动作中保存的读锁的名称是否存在。 如果找不到，则throws
+    Verify that the name of the read lock saved in the action exists. If not found, throws.
 
    - parameter    
-      - name	- 待验证账户的名称    
+      - name	- name of the account to be verified    
 <h5 id="require_recipient">require_recipient()</h5>
    > void require_recipient(account_name name)	
 
-    将指定的帐户添加到要通知的帐户集
+    Add the specified account to the set of accounts to be notified
 
    - parameter    
-        - name	- 待验证账户的名称   
+        - name	- name of the account to be verified   
         
 <h5 id="require_write_lock">require_write_lock()</h5>
    > void require_write_lock(account_name name)	
 
-    验证该操作中保存的写锁集合中是否存在该名称。 如果找不到，则throws
+    Verify that the name exists in the set of write locks saved in the operation. If not found, throws.
 
    - parameter    
-       - name	- 待验证账户的名称
+       - name	- name of the account to be verified
        
 <h5 id="send_context_free_inline">send_context_free_inline()</h5>
    > void send_context_free_inline(char * serialized_action, size_t size)		
