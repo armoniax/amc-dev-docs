@@ -1,6 +1,6 @@
 RPC
 ----
-Describe how to use HTTP RPC.
+Describe how to use HTTP RPC of amnod.
 
 Content
 ---
