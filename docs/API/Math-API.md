@@ -52,6 +52,7 @@ Define basic mathematical operations that use higher abstraction.
         - self a pointer to molecule. It will be replaced with the result.
         - other a pointer to denominator　　　
 
+
 Example:
 ```c++
 uint128_t self(100);
@@ -104,6 +105,7 @@ printd(a); // Output: 0.1
     - return
         - If the first input is equal to the second input, it's 1, otherwise it's 0.　
         　
+         
 Example:
 ```c++
 int64_t a = double_div( i64_to_double(10), i64_to_double(10) );
