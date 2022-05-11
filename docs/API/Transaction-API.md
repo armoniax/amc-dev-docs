@@ -1,18 +1,18 @@
 # Transaction API
 
-Define APIs for sending transactions and inline messages
+Define the API for sending transactions and inline messages
 
 ## Transaction C API
 
-Defines the API used to send transactions
+Define the API used to send transactions
 
-## Transaction CPP API  
+## Transaction C++ API  
 
 Safe Transaction C++ encapsulation for C API 
 
 ### Description
 
-AMAX transaction has the following abstract structure:：
+AMAX transaction has the following abstract structure:
 
 ```C++
 struct transaction {
