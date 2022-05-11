@@ -121,6 +121,7 @@ printi(res); // Output: 0
     - return
         - If the first input is larger than the second input, it's 1, otherwise it's 0.　　
         　
+         
 Example:
 ```c++
 uint64_t a = double_div( i64_to_double(10), i64_to_double(10) );
@@ -139,6 +140,7 @@ printi(res); // Output: 0
     - return
         - If the first input is smaller than the second input, it's 1, otherwise it's 0.
         　　　　
+            
 Example:
 ```c++
 uint64_t a = double_div( i64_to_double(10), i64_to_double(10) );
@@ -157,6 +159,7 @@ printi(res); // Output: 1
     - return
         - reinterpret_cast interprets the result into a 64 bit unsigned integer
         　　　
+           
 Example:
 ```c++
 uint64_t a = double_div( i64_to_double(10), i64_to_double(10) );
@@ -173,6 +176,7 @@ printd(res); // Output: 2.5
     - return
         - 64 bit unsigned integer　
         　　
+          
 Example:
 ```c++
 uint64_t a = double_div( i64_to_double(5), i64_to_double(2) );
@@ -188,6 +192,7 @@ printi(res); // Output: 2
         - a double is interpreted as 64 bit unsigned integer
     - return
         -　double conversion result　　　
+
 
 Example:
 ```c++
