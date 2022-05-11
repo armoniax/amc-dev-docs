@@ -203,7 +203,7 @@ print(now()); // Output: timestamp of last accepted block
         - size	- The size of the serialization operation, in bytes   
 
 ## Action CPP API   
-Type safe C++ encapsulation of Action C API
+safe C++ encapsulation of Action C API
 
 
 ### Class
@@ -239,7 +239,7 @@ void 	eosio::[dispatch_inline](#dispatch_inline) (permission_level perm, account
 ### Description
 ---
 > Note：
-> Action C API中有一些方法可以直接从C++中使用.
+> There are some methods in Action C API that can be used directly from C++.
 
 ### Function docs
 
@@ -247,7 +247,7 @@ void 	eosio::[dispatch_inline](#dispatch_inline) (permission_level perm, account
 > template< typename T \>    
 > T eosio::current_action_data()	
 
-    此方法尝试将操作主体重新解释为T类型。这仅在操作没有动态字段且T类型的结构包装已正确定义时才起作用。
+    This method attempts to reinterpret the operation body as type T. This works only if the operation has no dynamic fields and the structure wrapper of type T is correctly defined.
 
 Example:
 ```
@@ -270,12 +270,12 @@ dummy_action msg = current_action_data<dummy_action>();
 > template<typename... accounts \>    
 > void eosio::require_recipient(account_name name, accounts... remaining_accounts)
 		
-    所有列出的账户将被添加到要通知的账户集合中
+    All listed accounts will be added to the set of accounts to be notified.
 
-    这种辅助方法使您能够通过一次调用将多个账户添加到要通知列表的账户，而不必多次调用类似的C API。
+    This method enables you to add multiple accounts to the list of accounts to be notified in one call without having to call a similar C API multiple times.
 
 > Note:
-> action.code也被视为通知帐户集的一部分
+> action.code is also seen as part of the account set.
 
 Example:
 ```
