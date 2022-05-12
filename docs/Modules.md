@@ -3,7 +3,7 @@
 
 Here is a list of all the modules:
 
-- [Smart contract API reference](SmartContract.md)  
+- [Smart contract API reference](Smart Contract.md)  
 
   - [AMAX-RPC](API/AMAX-RPC.md) - Describe how to use HTTP RPC of amnod.
 
