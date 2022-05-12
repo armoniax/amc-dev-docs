@@ -21,11 +21,11 @@ how to :ref:`installation` the project.
 |---|---|---|
 |首页: index.md|100| Sophia|
 |相关页面: relatedpage.md |100|Sophia|
-|智能合约: smartcontract.md |50|Sophia|
-|模块: Modules.md |0|Sophia|
+|智能合约: smartcontract.md |100|Sophia|
+|模块: Modules.md |100|Sophia|
 |命名空间: namespaces/namespacelist.md|100|Sophia|
 |类: Classes/classlist.md |100|Sophia|
 |文件: files/filelist.md|100|Sophia|
-|API|20|Sophia|
+|API|100|Sophia|
 
 __有许多二级,三级页面没有加入列表,请翻译者翻译后自己加入__
