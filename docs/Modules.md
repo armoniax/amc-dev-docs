@@ -10,12 +10,12 @@ Here is a list of all the modules:
   - [Account API](API/Account-API.md) - query account data.
 
     - [Account C API](API/Account-API.md#Account C API) - C API for querying account data.
-    - [Account CPP API](API/Account-API.md#Account CPP API) - C++ API for querying account data. 
+    - [Account C++ API](API/Account-API.md#Account C++ API) - C++ API for querying account data. 
 
   - [Action API](API/Action-API.md) - define the API used to query action attributes.
 
     - [Action C API](API/Action-API.md#Action C API) - define the API used to query operation attributes.
-    - [Action CPP API](API/Action-API.md#Action CPP API) - safe C++ encapsulation of Action C API.
+    - [Action C++ API](API/Action-API.md#Action C++ API) - safe C++ encapsulation of Action C API.
 
   - [Builtin Types](API/Builtin Types.md) - define typedefs and alias.
 
@@ -26,7 +26,7 @@ Here is a list of all the modules:
   - [Console API](API/Console-API.md) - enable applications to log / print messages.
 
     - [Console C API](API/Console-API.md#Console C API) - C API that enables applications to record / print text messages.
-    - [Console CPP API](API/Console-API.md#Console CPP API) - C++ encapsulation of Console C API.
+    - [Console C++ API](API/Console-API.md#Console C++ API) - C++ encapsulation of Console C API.
 
   - [Database API](API/Database-API.md) - Store and retrieve the data of Armonia blockchain. It organizes data according to the following structure.
 
@@ -50,5 +50,5 @@ Here is a list of all the modules:
   - [Transaction API](API/Transaction-API.md) - define the API used to send transactions and inline messages
 
     - [Transaction C API](API/Transaction-API.md#Transaction C API) - define the API used to send transactions
-    - [Transaction CPP API](API/Transaction-API.md#Transaction CPP API) - safe C++ encapsulation of Transaction C API
+    - [Transaction C++ API](API/Transaction-API.md#Transaction C++ API) - safe C++ encapsulation of Transaction C API
 
