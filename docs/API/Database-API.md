@@ -25,4 +25,4 @@ Each transaction specifies a set of valid ranges that can be read and / or writt
 Supported table type determined by its number and size：
 1. dbi64
 
-databasecpp provides a simple API for storing fixed size structure as database rows.
+Database C++ provides a simple API for storing fixed size structure as database rows.
