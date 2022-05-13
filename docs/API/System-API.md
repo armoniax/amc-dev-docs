@@ -9,4 +9,3 @@ Define APIs for accessing configuration links, which can only be done by privile
 ## System C API   
 Define APIs for interacting with system level internal functions.
 
-### Description
